@@ -1,0 +1,146 @@
+﻿  lex.yy.c
+htmlcompact.lex(260): error C2065: 'A_OPEN_TAG': undeclared identifier
+htmlcompact.lex(260): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(260): warning C4013: 'count' undefined; assuming extern returning int
+htmlcompact.lex(260): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(260): warning C4033: 'yylex' must return a value
+htmlcompact.lex(261): error C2065: 'A_CLOSE_TAG': undeclared identifier
+htmlcompact.lex(261): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(261): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(261): warning C4033: 'yylex' must return a value
+htmlcompact.lex(262): error C2065: 'ABBR_OPEN_TAG': undeclared identifier
+htmlcompact.lex(262): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(262): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(262): warning C4033: 'yylex' must return a value
+htmlcompact.lex(263): error C2065: 'ABBR_CLOSE_TAG': undeclared identifier
+htmlcompact.lex(263): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(263): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(263): warning C4033: 'yylex' must return a value
+htmlcompact.lex(264): error C2065: 'ACRONYM_OPEN_TAG': undeclared identifier
+htmlcompact.lex(264): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(264): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(264): warning C4033: 'yylex' must return a value
+htmlcompact.lex(265): error C2065: 'ACRONYM_CLOSE_TAG': undeclared identifier
+htmlcompact.lex(265): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(265): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(265): warning C4033: 'yylex' must return a value
+htmlcompact.lex(266): error C2065: 'ADDRESS_OPEN_TAG': undeclared identifier
+htmlcompact.lex(266): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(266): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(266): warning C4033: 'yylex' must return a value
+htmlcompact.lex(267): error C2065: 'ADDRESS_CLOSE_TAG': undeclared identifier
+htmlcompact.lex(267): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(267): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(267): warning C4033: 'yylex' must return a value
+htmlcompact.lex(268): error C2065: 'APPLET_OPEN_TAG': undeclared identifier
+htmlcompact.lex(268): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(268): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(268): warning C4033: 'yylex' must return a value
+htmlcompact.lex(269): error C2065: 'APPLET_CLOSE_TAG': undeclared identifier
+htmlcompact.lex(269): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(269): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(269): warning C4033: 'yylex' must return a value
+htmlcompact.lex(270): error C2065: 'AREA_OPEN_TAG': undeclared identifier
+htmlcompact.lex(270): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(270): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(270): warning C4033: 'yylex' must return a value
+htmlcompact.lex(271): error C2065: 'AREA_CLOSE_TAG': undeclared identifier
+htmlcompact.lex(271): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(271): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(271): warning C4033: 'yylex' must return a value
+htmlcompact.lex(272): error C2065: 'B_OPEN_TAG': undeclared identifier
+htmlcompact.lex(272): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(272): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(272): warning C4033: 'yylex' must return a value
+htmlcompact.lex(273): error C2065: 'B_CLOSE_TAG': undeclared identifier
+htmlcompact.lex(273): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(273): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(273): warning C4033: 'yylex' must return a value
+htmlcompact.lex(274): error C2065: 'BASE_OPEN_TAG': undeclared identifier
+htmlcompact.lex(274): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(274): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(274): warning C4033: 'yylex' must return a value
+htmlcompact.lex(275): error C2065: 'BASE_CLOSE_TAG': undeclared identifier
+htmlcompact.lex(275): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(275): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(275): warning C4033: 'yylex' must return a value
+htmlcompact.lex(276): error C2065: 'BASEFONT_OPEN_TAG': undeclared identifier
+htmlcompact.lex(276): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(276): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(276): warning C4033: 'yylex' must return a value
+htmlcompact.lex(277): error C2065: 'BASEFONT_CLOSE_TAG': undeclared identifier
+htmlcompact.lex(277): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(277): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(277): warning C4033: 'yylex' must return a value
+htmlcompact.lex(278): error C2065: 'BDO_OPEN_TAG': undeclared identifier
+htmlcompact.lex(278): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(278): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(278): warning C4033: 'yylex' must return a value
+htmlcompact.lex(279): error C2065: 'BDO_CLOSE_TAG': undeclared identifier
+htmlcompact.lex(279): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(279): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(279): warning C4033: 'yylex' must return a value
+htmlcompact.lex(280): error C2065: 'BIG_OPEN_TAG': undeclared identifier
+htmlcompact.lex(280): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(280): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(280): warning C4033: 'yylex' must return a value
+htmlcompact.lex(281): error C2065: 'BIG_CLOSE_TAG': undeclared identifier
+htmlcompact.lex(281): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(281): warning C4013: 'symbol' undefined; assuming extern returning int
+htmlcompact.lex(281): error C2065: 'sum': undeclared identifier
+htmlcompact.lex(281): error C2059: syntax error: '='
+htmlcompact.lex(281): error C2143: syntax error: missing ';' before ')'
+htmlcompact.lex(282): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(282): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(282): warning C4033: 'yylex' must return a value
+htmlcompact.lex(283): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(283): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(283): warning C4033: 'yylex' must return a value
+htmlcompact.lex(284): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(284): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(284): warning C4033: 'yylex' must return a value
+htmlcompact.lex(285): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(285): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(285): warning C4033: 'yylex' must return a value
+htmlcompact.lex(286): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(286): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(286): warning C4033: 'yylex' must return a value
+htmlcompact.lex(287): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(287): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(287): warning C4033: 'yylex' must return a value
+htmlcompact.lex(288): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(288): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(288): warning C4033: 'yylex' must return a value
+htmlcompact.lex(289): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(289): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(289): warning C4033: 'yylex' must return a value
+htmlcompact.lex(290): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(290): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(290): warning C4033: 'yylex' must return a value
+htmlcompact.lex(291): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(291): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(291): warning C4033: 'yylex' must return a value
+htmlcompact.lex(292): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(292): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(292): warning C4033: 'yylex' must return a value
+htmlcompact.lex(293): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(293): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(293): warning C4033: 'yylex' must return a value
+htmlcompact.lex(294): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(294): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(294): warning C4033: 'yylex' must return a value
+htmlcompact.lex(295): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(295): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(295): warning C4033: 'yylex' must return a value
+htmlcompact.lex(296): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(296): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(296): warning C4033: 'yylex' must return a value
+htmlcompact.lex(297): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(297): error C2143: syntax error: missing ';' before '='
+htmlcompact.lex(297): warning C4033: 'yylex' must return a value
+htmlcompact.lex(298): error C2143: syntax error: missing ';' before '}'
+htmlcompact.lex(298): fatal error C1003: error count exceeds 100; stopping compilation
+  SimpleLexer.c
+c:\simplelexer\simplelexer\simplelexer.c(14): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+  Generating Code...
