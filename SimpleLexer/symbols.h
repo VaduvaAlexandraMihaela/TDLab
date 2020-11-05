@@ -2,7 +2,7 @@
 #define __SYMBOLS_H__
 #define doctype = 0;
 #define exclamation = 1; 
-#define endtag = 2;
+#define ENDTAG = 2;
 #define andX = 3; 
 #define opena = 4; 
 #define closea = 5; 
@@ -234,5 +234,8 @@
 #define ROWSPAN = 233; 
 #define COLSPAN = 234; 
 #define NOWRAP = 234; 
+#define opens = 235; 
+#define closes = 236;
+#define Content = 237;
 #endif
 
