@@ -21,12 +21,18 @@
     <ClCompile Include="lex.yy.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="htmlcompact.tab.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="symbols.h">
+    <ClInclude Include="FlexLexer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FlexLexer.h">
+    <ClInclude Include="htmlcompact.tab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,6 +41,9 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="input.csrc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="htmlcompact.y">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

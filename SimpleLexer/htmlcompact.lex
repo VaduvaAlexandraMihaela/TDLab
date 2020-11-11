@@ -1,6 +1,6 @@
 %{
 #include <stdio.h>
-#include "symbols.h"
+#include "htmlcompact.tab.h"
 
 void count();
 %}

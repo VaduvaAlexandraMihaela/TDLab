@@ -2,11 +2,14 @@
 //
 
 #include <stdio.h>
-#include "symbols.h"
+//#include "symbols.h"
+#include "htmlcompact.tab.h"
 #include <errno.h>
 
 extern FILE* yyin;
-extern int yylex(void);
+//extern int yylex(void);
+extern int yyparse(void);
+extern int yydebug;
 
 const char* symbols[] = {
 "ENDTAG",  
@@ -234,20 +237,35 @@ const char* symbols[] = {
 
 int main()
 {
-	int tokenValue = 0;
-	yyin = fopen("input.csrc", "rt");
-	if (yyin != NULL)
 	{
-		while ((tokenValue = yylex()) != 0)
+		yydebug = 1;
+		int tokenValue = 0;
+		yyin = fopen("input.csrc", "rt");
+		if (yyin != NULL)
 		{
-			printf(" -> TOKEN ID: %d; Token Value: %s \n", tokenValue, symbols[tokenValue]);
+			int result = yyparse();
+			switch (result)
+			{
+			case 0:
+				printf("Parse successfull. \n");
+				break;
+			case 1:
+				printf("Invalid input encountered \n");
+				break;
+			case 2:
+				printf("Out of memory \n");
+				break;
+			default:
+				break;
+			}
+
+			fclose(yyin);
+		}
+		else
+		{
+			printf("Fisier inexistent");
 		}
 	}
-	else
-	{
-		printf("Fisierul de intrare nu poate fi deschis. Eroare: %d", errno);
-	}
-
 
 }
 

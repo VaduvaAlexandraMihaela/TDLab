@@ -1189,7 +1189,7 @@ char *yytext;
 #line 1 "htmlcompact.lex"
 #line 2 "htmlcompact.lex"
 #include <stdio.h>
-#include "symbols.h"
+#include "htmlcompact.tab.h"
 
 void count();
 #line 1195 "lex.yy.c"

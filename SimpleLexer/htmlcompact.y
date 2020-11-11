@@ -1,709 +1,789 @@
 %{
-#include <stdio.h>
+ #include "stdio.h"
+ int yyerror(char * s);
+ extern int yylex(void);
 %}
 
-
-%token opena
-%token closea 
-%token openabbr 
-%token closeabbr  
-%token openacronym 
-%token closeacronym 
-%token openaddress 
-%token closeaddress 
-%token openapplet
-%token closeapplet  
-%token openarea  
-%token closearea 
-%token openb  
-%token closeb  
-%token openbase 
-%token closebase 
-%token openbasefont
-%token closebasefont 
-%token openbdo  
-%token closebdo  
-%token openbig 
-%token closebig  
-%token openblockquote 
-%token closeblockquote 
-%token openbody
-%token closebody 
-%token openbr 
-%token closebr 
-%token openbutton 
-%token closebutton 
-%token opencaption 
-%token closecaption 
-%token opencenter
-%token closecenter 
-%token opencite 
-%token closecite 
-%token opencode 
-%token closecode 
-%token opencol 
-%token closecol 
-%token opencolgroup 
-%token closecolgroup 
-%token opendd 
-%token closedd 
-%token opendel
-%token closedel 
-%token opendfn 
-%token closedfn 
-%token opendir 
-%token closedir 
-%token opendiv 
-%token closediv
-%token opendl 
-%token closedl 
-%token opendt
-%token closedt
-%token openem
-%token closeem 
-%token openfieldset
-%token closefieldset 
-%token openfont
-%token closefont
-%token openform
-%token closeform
-%token openframe 
-%token closeframe 
-%token openframeset 
-%token closeframeset 
-%token openhead 
-%token closehead 
-%token openhn
-%token closehn
-%token openhr 
-%token closehr 
-%token openhtml 
-%token closehtml 
-%token openi 
-%token closei
-%token openiframe
-%token closeiframe
-%token openimg
-%token closeimg
-%token openinput
-%token closeinput 
-%token openins
-%token closeins
-%token openisindex 
-%token closeisindex
-%token openkbd 
-%token closekbd
-%token openlabel
-%token closelabel
-%token openlegend
-%token closelegend
-%token openli 
-%token closeli
-%token openlink
-%token closelink 
-%token openlisting 
-%token closelisting 
-%token openmap 
-%token closemap
-%token openmenu
-%token closemenu 
-%token openmeta 
-%token closemeta
-%token opennextid 
-%token closenextid
-%token opennoframes
-%token closenoframes 
-%token opennoscript
-%token closenoscript
-%token openobject
-%token closeobject
-%token openol 
-%token closeol 
-%token openoptgroup 
-%token closeoptgroup 
-%token openoption 
-%token closeoption 
-%token openp
-%token closep
-%token openparam
-%token closeparam
-%token openplaintext
-%token closeplaintext
-%token openpre 
-%token openq
-%token closeq
-%token sopen 
-%token sclose
-%token sampopen
-%token sampclose
-%token scriptopen
-%token scriptclose 
-%token selectopen
-%token selectclose
-%token smallopen
-%token smallclose
-%token spanopen 
-%token spanclose
-%token strikeopen 
-%token strikeclose 
-%token strongopen
-%token strongclose
-%token styleopen
-%token styleclose 
-%token subopen
-%token subclose
-%token supopen 
-%token supclose 
-%token tableopen
-%token tableclose
-%token tbodyopen 
-%token tbodyclose
-%token tdopen
-%token tdclose 
-%token textareaopen 
-%token textareaclose
-%token tfootopen 
-%token tfootclose
-%token thopen
-%token thclose 
-%token theadopen 
-%token theadclose 
-%token titleopen
-%token titleclose 
-%token tropen
-%token trclose
-%token ttopen 
-%token ttclose 
-%token uopen 
-%token uclose 
-%token ulopen
-%token ulclose 
-%token varopen
-%token varclose 
-%token xmpopen 
-%token xmpclose
-%token closepre
-%token NAME
-%token HREF
+%token ENDTAG  
+%token ABBROPEN 
+%token ABBRCLOSE 
+%token ACRONYMOPEN 
+%token ACROBYMCLOSE 
+%token ADDRESSOPEN
+%token ADDRESSCLOSE 
+%token APPLETOPEN
+%token APPLETCLOSE 
+%token AREAOPEN 
+%token AREACLOSE 
+%token BASEOPEN 
+%token BASECLOSE 
+%token BASEFONTOPEN
+%token BASEFONTCLOSE 
+%token BDOOPEN 
+%token BDOCLOSE 
+%token BIGOPEN
+%token BIGCLOSE 
+%token BODYOPEN 
+%token BODYCLOSE 
+%token BLOCKQUOTEOPEN
+%token BLOCKQUOTECLOSE 
+%token BUTTONOPEN 
+%token BUTTONCLOSE 
+%token CAPTIONOPEN 
+%token CAPTIONCLOSE 
+%token CODEOPEN 
+%token CODECLOSE 
+%token COLOPEN 
+%token COLCLOSE 
+%token COLGROUPOPEN 
+%token COLGROUPCLOSE 
+%token DDOPEN 
+%token DDCLOSE 
+%token DELOPEN 
+%token DELCLOSE 
+%token DFNOPEN 
+%token DFNCLOSE 
+%token DIROPEN 
+%token DIRCLOSE 
+%token DIVOPEN
+%token DIVCLOSE 
+%token DLOPEN 
+%token DLCLOSE 
+%token DTOPEN 
+%token DTCLOSE 
+%token EMOPEN 
+%token EMCLOSE 
+%token FIELDSETOPEN 
+%token FIELDSETCLOSE 
+%token FRAMEOPEN 
+%token FRAMECLOSE 
+%token FRAMESETOPEN 
+%token FRAMESETCLOSE 
+%token NOFRAMESOPEN 
+%token NOFRAMESCLOSE 
+%token FORMOPEN 
+%token FORMCLOSE 
+%token HEADOPEN 
+%token HEADCLOSE 
+%token HNOPEN 
+%token HNCLOSE 
+%token HTMLOPEN 
+%token HTMLCLOSE 
+%token INPUTOPEN 
+%token INPUTCLOSE 
+%token IFRAMEOPEN 
+%token IFRAMECLOSE 
+%token INSOPEN 
+%token INSCLOSE 
+%token KBDOPEN 
+%token KBDCLOSE 
+%token LABELOPEN 
+%token LABELCLOSE 
+%token LEGENDOPEN 
+%token LEGENDCLOSE 
+%token LISTINGOPEN 
+%token LISTINGCLOSE 
+%token MAPOPEN 
+%token MAPCLOSE 
+%token MENUOPEN 
+%token MENUCLOSE 
+%token METAOPEN 
+%token METACLOSE 
+%token NEXTIDOPEN 
+%token NEXTIDCLOSE 
+%token NOSCRIPTOPEN 
+%token NOSCRIPTCLOSE
+%token SELECTOPEN 
+%token SELECTCLOSE 
+%token OPTIONOPEN 
+%token OPTIONCLOSE 
+%token OBJECTOPEN 
+%token OBJECTCLOSE 
+%token OPTGROUPOPEN 
+%token OPTGROUPCLOSE 
+%token PARAMOPEN 
+%token PARAMCLOSE 
+%token PLAINTEXTOPEN
+%token PLAINTEXTCLOSE 
+%token PREOPEN 
+%token PRECLOSE 
+%token QOPEN 
+%token QCLOSE 
+%token SOPEN 
+%token SCLOSE 
+%token SAMPOPEN 
+%token SAMPCLOSE 
+%token SCRIPTOPEN 
+%token SCRIPTCLOSE 
+%token SPANOPEN 
+%token SPANCLOSE 
+%token STRIKEOPEN 
+%token STRIKECLOSE 
+%token STRONGOPEN 
+%token STRONGCLOSE 
+%token STYLEOPEN 
+%token STYLECLOSE 
+%token TABLEOPEN 
+%token TABLECLOSE 
+%token TROPEN 
+%token TRCLOSE 
+%token TDOPEN 
+%token TDCLOSE 
+%token THOPEN 
+%token THCLOSE 
+%token THEADOPEN 
+%token THEADCLOSE 
+%token TBODYOPEN 
+%token TBODYCLOSE 
+%token TEXTAREAOPEN 
+%token TEXTAREACLOSE 
+%token TFOOTOPEN 
+%token TFOOTCLOSE 
+%token TITLEOPEN 
+%token TITLECLOSE 
+%token TTOPEN 
+%token TTCLOSE 
+%token IMGOPEN 
+%token IMGCLOSE 
+%token AOPEN 
+%token ACLOSE 
+%token LINKOPEN 
+%token LINKCLOSE 
+%token ULOPEN 
+%token ULCLOSE 
+%token LIOPEN 
+%token LICLOSE 
+%token OLOPEN 
+%token OLCLOSE 
+%token POPEN 
+%token PCLOSE 
+%token IOPEN 
+%token ICLOSE 
+%token UOPEN 
+%token UCLOSE 
+%token SMALLOPEN 
+%token SMALLCLOSE 
+%token SUPOPEN 
+%token SUPCLOSE 
+%token SUBOPEN 
+%token SUBCLOSE 
+%token CENTEROPEN 
+%token CENTERCLOSE   
+%token FONTOPEN 
+%token FONTCLOSE 
+%token HROPEN 
+%token HRCLOSE 
+%token BROPEN 
+%token BRCLOSE 
+%token NAME 
+%token HREF 
 %token REL 
 %token REV
-%token METHODS
-%token SHAPE
-%token COORDS
-%token NOHREF
-%token SIZE
-%token BGCOLOR
-%token BACKGROUND
+%token TITLE 
+%token URN 
+%token METHODS  
+%token SHAPE 
+%token COORDS 
+%token ALT 
+%token NOHREF 
+%token BGCOLOR 
+%token BACKGROUND 
 %token TEXT 
-%token LINK
-%token VLINK
-%token ALINK
+%token LINK 
+%token VLINK 
+%token ALINK 
 %token CLEAR 
 %token COMPACT 
 %token ALIGN 
-%token COLOR
+%token SIZE 
+%token COLOR 
 %token ACTION 
-%token ENCTYPE
+%token ENCTYPE 
 %token WIDTH 
-%token NOSHADE 
-%token VERSION
+%token NOSHADE
+%token VERSION 
 %token SRC
-%token HEIGHT 
-%token VSPACE
-%token ALT
-%token BORDER 
+%token HEIGHT
+%token VSPACE 
+%token BORDER
 %token USEMAP
-%token ISMAP 
+%token ISMAP
 %token TYPE
-%token MAXLENGTH 
+%token MAXLENGTH
 %token VALUE 
 %token CHECKED 
-%token PROMPT 
-%token URN 
-%token TITLE
-%token ID 
+%token PROMPT
+%token ID
 %token HTTP_EQUIV 
 %token CONTENT
 %token N 
 %token START 
 %token SELECTED 
 %token MULTIPLE 
-%token CELLSPACING
+%token CELLSPACING 
 %token CELLPADDING 
 %token ROWSPAN
-%token COLSPAN 
-%token NOWRAP 
-%token opens
-%token closes
-%token Content
-
-%start INIT 
-%% 
-
-INIT 
-	: HTML_TAG 
-	; 
-
-HTML_TAG 
-	: openhtml Content closehtml
-	| openhtml VERSION Content closehtml
-	;
-	
-ABBR_TAG 
-	: openabbr Content closeabbr
-	;
-
-ACRONYM_TAG 
-	: openacronym Content closeacronym
-	;
-
- ADDRESS_TAG 
-	: openaddress Content closeaddress
-	;
-
-APPLET_TAG 
-	: openapplet Content closeapplet
-	;
-
-B_TAG 
-	: openb Content closeb
-	;
-
-BLOCKQUOTE_TAG 
-	: openblockquote Content closeblockquote
-	;
-
-BUTTON_TAG 
-	: openbutton Content closebutton
-	;
-
-CAPTION_TAG 
-	: opencaption Content closecaption
-	;
-
-CENTER_TAG 
-	: opencenter Content closecenter
-	;
-
-CITE_TAG 
-	: opencite Content closecite
-	;
-
-COL_TAG 
-	: opencol Content closecol
-	;
-
-CODE_TAG 
-	: opencode Content closecode
-	;
-
-
-COLGROUP_TAG 
-	: opencolgroup Content closecolgroup
-	;
-
-DD_TAG 
-	: opendd Content closedd
-	;
-
-DEL_TAG 
-	: opendel Content closedel
-	;
-
-DFN_TAG 
-	: opendfn Content closedfn
-	;
-
-BIG_TAG 
-	: openbig Content closebig
-	;
-
-BDO_TAG 
-	: openbdo Content closebdo
-	;
-	
-DT_TAG 
-	: opendt Content closedt
-	;
-
-EM_TAG 
-	: openem Content closeem
-	;
-
-FIELDSET_TAG 
-	: openfieldset Content closefieldset
-	;
-
-FRAME_TAG 
-	: openframe Content closeframe
-	;
-
-FRAMESET_TAG 
-	: openframeset Content closeframeset
-	;
-
-HEAD_TAG 
-	: openhead Content closehead
-	;
-
-I_TAG 
-	: openi Content closei
-	;
-
-IFRAME_TAG 
-	: openiframe Content closeiframe
-	;
-
-INS_TAG 
-	: openins Content closeins
-	;
-
-KBD_TAG 
-	: openkbd Content closekbd
-	;
-
-LABEL_TAG 
-	: openlabel Content closelabel
-	;
-
-LEGEND_TAG 
-	: openlegend Content closelegend
-	;
-
-LISTING_TAG 
-	: openlisting Content closelisting
-	;
-
-NOFRAMES_TAG 
-	: opennoframes Content closenoframes
-	;
-
-NOSCRIPT_TAG 
-	: opennoscript Content closenoscript
-	;
-
-OBJECT_TAG 
-	: openobject Content closeobject
-	;
-
-OPTGROUP_TAG 
-	: openoptgroup Content closeoptgroup
-	;
-	
-PARAM_TAG 
-	: openparam Content closeparam
-	;
-
-PLAINTEXT_TAG 
-	: openplaintext Content closeplaintext
-	;
-
-Q_TAG 
-	: openq Content closeq
-	;
-
-S_TAG 
-	: opens Content closes
-	;
-
-SAMP_TAG 
-	: sampopen Content sampclose
-	;
-
-SCRIPT_TAG 
-	: scriptopen Content scriptclose
-	;
-
-SMALL_TAG 
-	: smallopen Content smallclose
-	;
-
-SPAN_TAG 
-	: spanopen Content spanclose
-	;
-
-STRIKE_TAG 
-	: strikeopen Content strikeclose
-	;
-
-STRONG_TAG 
-	: strongopen Content strongclose
-	;
-
-STYLE_TAG 
-	: styleopen Content styleclose
-	;
-
-SUB_TAG 
-	: subopen Content subclose
-	;
-
-SUP_TAG 
-	: subopen Content supclose
-	;
-
-TBODY_TAG 
-	: tbodyopen Content tbodyclose
-	;
-
-THEAD_TAG 
-	: theadopen Content theadclose
-	;
-
-TITLE_TAG 
-	: titleopen Content titleclose
-	;
-
-TT_TAG 
-	: tropen Content ttclose
-	;
-
-U_TAG 
-	: uopen Content uclose
-	;
-
-VAR_TAG 
-	: varopen Content varclose
-	;
-
-XMP_TAG 
-	: xmpopen Content xmpclose
-	;
-
-MENU_TAG 
-	: openmenu Content closemenu 
-    | openmenu COMPACT Content closemenu
-;
-
-A_TAG 
-	: opena Content closea 
-    | opena HREF Content closea
-    | opena REL Content closea
-    | opena REV Content closea
-    | opena TITLE Content closea
-    | opena URN Content closea
-    | opena METHODS Content closea
-
-	;
-
-AREA_TAG 
-	: openarea Content closearea
-    | openarea SHAPE Content closearea 
-    | openarea COORDS Content closearea
-    | openarea HREF Content closearea
-    | openarea ALT Content closearea
-    | openarea NOHREF Content closearea
-	;
-
-BASE_TAG 
-	: openbase Content closebase 
-    | openbase HREF Content closebase
-	;
-
-BODY_TAG 
-	: openbody Content closebody 
-    | openbody BGCOLOR Content closebody 
-    | openbody BACKGROUND Content closebody 
-    | openbody TEXT Content closebody 
-    | openbody LINK Content closebody 
-    | openbody VLINK Content closebody 
-    | openbody ALINK Content closebody 
-	;
-
-BR_TAG 
-	: openbr Content closebr 
-    | openbr CLEAR Content closebr 
-	;
-
-DIR_TAG 
-	: opendir Content closedir
-    | opendir COMPACT Content closedir
-	;
-
-DIV_TAG 
-	: opendiv Content closediv
-    | opendiv ALIGN Content opendiv
-	;
-
-DL_TAG 
-	: opendl Content closedl
-    | opendl COMPACT Content closedl
-	;
-
-FONT_TAG 
-	:openfont Content closefont
-    | openfont SIZE Content closefont
-    | openfont COLOR Content closefont
-	;
-
-FORM_TAG 
-	: openform Content closeform
-    | openform ACTION Content closeform
-    | openform METHODS Content closeform
-    | openform ENCTYPE Content closeform
-	;
-
-HN_TAG 
-	: openhn Content closehn
-    | openhn ALIGN Content closehn
-	;
-
-HR_TAG 
-	: openhr Content closehr
-    | openhr ALIGN Content closehr
-    | openhr SIZE Content closehr
-    | openhr WIDTH Content closehr
-    | openhr NOSHADE Content closehr
-	;
-
-IMG_TAG 
-	: openimg Content closeimg
-    | openimg SRC Content closeimg
-    | openimg ALIGN Content closeimg
-    | openimg WIDTH Content closeimg
-    | openimg HEIGHT Content closeimg
-    | openimg VSPACE Content closeimg
-    | openimg ALT Content closeimg
-    | openimg BORDER Content closeimg
-    | openimg USEMAP Content closeimg
-    | openimg ISMAP Content closeimg
-	;
-
-INPUT_TAG 
-	: openinput Content closeinput
-    | openinput TYPE Content closeinput
-    | openinput NAME Content closeinput
-    | openinput SIZE Content closeinput
-    | openinput MAXLENGTH Content closeinput
-    | openinput VALUE Content closeinput
-    | openinput CHECKED Content closeinput
-    | openinput SRC Content closeinput
-    | openinput ALIGN Content closeinput
-	;
-
-ISINDEX_TAG 
-	: openisindex Content closeisindex
-    | openisindex PROMPT Content closeisindex
-	;
-
-LI_TAG 
-	: openli Content closeli
-    | openli SIZE Content closeli
-    | openli VALUE Content closeli
-	;
-
-LINK_TAG 
-	: openlink Content closelink
-    | openlink HREF Content closelink
-    | openlink REL Content closelink
-    | openlink REV Content closelink
-    | openlink URN Content closelink
-    | openlink METHODS Content closelink
-    | openlink TITLE Content closelink
-    | openlink ID Content closelink
-	;
-
-MAP_TAG 
-	: openmap Content closemap
-    | openmap NAME Content closemap
-	;
-
-META_TAG 
-	: openmeta Content closemeta
-    | openmeta NAME Content closemeta
-    | openmeta CONTENT Content closemeta
-    | openmeta HTTP_EQUIV Content closemeta
-	;
-
-NEXTID_TAG 
-	: opennextid Content closenextid
-	;
-
-OL_TAG 
-	: openol Content closeol
-    | openol TYPE Content closeol
-    | openol START Content closeol
-    | openol COMPACT Content closeol
-	;
-
-OPTION_TAG 
-	: openoption Content closeoption
-    | openoption SELECTED Content closeoption
-    | openoption VALUE Content closeoption
-	;
-
-P_TAG 
-	: openp Content closep
-    | openp WIDTH Content closep
-	;
-
-PRE_TAG 
-	: openpre Content closepre
-    | openpre WIDTH Content closepre
-	;
-
-SELECT_TAG 
-	: selectopen Content selectclose
-    | selectopen NAME Content selectclose
-    | selectopen SIZE Content selectclose
-    | selectopen MULTIPLE Content selectclose
-	;
-
-TABLE_TAG 
-	: tableopen Content tableclose
-    | tableopen ALIGN Content tableclose
-    | tableopen BORDER Content tableclose
-    | tableopen WIDTH Content tableclose
-    | tableopen CELLSPACING Content tableclose
-    | tableopen CELLPADDING Content tableclose
-	;
-
-TD_TAG 
-	: tdopen Content tdclose
-    | tdopen ALIGN Content tdclose
-    | tdopen ROWSPAN Content tdclose
-    | tdopen COLSPAN Content tdclose
-    | tdopen WIDTH Content tdclose
-    | tdopen HEIGHT Content tdclose
-    | tdopen NOWRAP Content tdclose   
-	;
-
-TEXTAREA_TAG 
-	: textareaopen Content textareaclose
-    | textareaopen NAME Content textareaclose
-    | textareaopen ROWSPAN Content textareaclose
-    | textareaopen COLSPAN Content textareaclose
-	;
-
-TH_TAG 
-	: thopen Content thclose
-    | thopen ALIGN Content thclose
-    | thopen ROWSPAN Content thclose
-    | thopen COLSPAN Content thclose
-    | thopen WIDTH Content thclose
-    | thopen HEIGHT Content thclose
-    | thopen NOWRAP Content thclose
-	;
-
-TR_TAG 
-	: tropen Content trclose
-    | tropen ALIGN Content trclose
+%token COLSPAN
+%token NOWRAP
+%token IDENTIFIER
+%token END_OF_INSTRUCTION
+  
+%start htmldocument
+%%
+
+htmldocument
+    : html_tag
     ;
 
-UL_TAG 
-	: ulopen Content ulclose
-    | ulopen TYPE Content ulclose
-    | ulopen COMPACT Content ulclose
+html_tag
+    : HTMLOPEN   
+      html_content  
+      HTMLCLOSE
+    ;
+
+    html_content
+    : head_tag body_tag 
+    | head_tag frameset_tag
+    ;
+
+    head_tag
+    : HEADOPEN   
+    head_content 
+    HEADCLOSE
+    ;
+
+    head_content
+    : 
+    | style_tag 
+    | script_tag 
+    ;
+	
+	abbr_tag
+	: ABBROPEN text
+	  ABBRCLOSE 
+	;
+	
+	acronym_tag
+	: ACRONYMOPEN text
+	  ACROBYMCLOSE
+	;
+	
+	address_tag
+	: ADDRESSOPEN address_content 
+	  ADDRESSCLOSE
+	;
+	
+	address_content
+	: p_tag
+	| text
+	;
+	
+	applet_tag 
+	: APPLETOPEN applet_content
+	  APPLETCLOSE
+	;
+	
+	body_content
+    : hr_tag
+	| address_tag
+    | block 
+	| del_tag
+	| ins_tag
+	| map_tag
+    | text 
+    ;
+	
+	applet_content
+	: body_content
+	;
+	
+	bdo_tag
+	: BDOOPEN body_content
+	  BDOCLOSE
+	;
+	
+	big_tag
+	: BIGOPEN text 
+	  BIGCLOSE 
+	; 
+	
+	
+
+    body_tag
+    : BODYOPEN body_content 
+      BODYCLOSE
+    ;
+
+   
+	
+	
+	caption_tag 
+	: CAPTIONOPEN body_content
+	  CAPTIONCLOSE
+	 ;
+	 
+	
+	colgroup_tag 
+	: COLGROUPOPEN colgroup_content 
+	COLGROUPCLOSE
+	;
+	
+	colgroup_content
+	: col_tag
+	; 
+	
+	col_tag
+	: COLOPEN body_content 
+	COLCLOSE
+	;
+	
+	content_style
+	: abbr_tag
+	| acronym_tag 
+	| code_tag
+	| dfn_tag 
+	| kbd_tag 
+	| q_tag 
+	| strong_tag 
+	| em_tag
+	; 
+	
+	code_tag
+	: CODEOPEN text 
+	 CODECLOSE
+	; 
+	
+	dfn_tag
+	: DFNOPEN text 
+	  DFNCLOSE
+	; 
+	 
+	 kbd_tag
+	 : KBDOPEN text 
+	   KBDCLOSE
+	 ;
+	
+	q_tag
+	: QOPEN text 
+	  QCLOSE 
+	; 
+	
+	strong_tag
+	: STRONGOPEN text 
+	  STRONGCLOSE
+	; 
+	
+	em_tag 
+	: EMOPEN text 
+	  EMCLOSE 
+	; 
+	
+	fieldset_tag 
+	: FIELDSETOPEN legend_tag form_content 
+	  FIELDSETCLOSE
+	; 
+	
+	legend_tag
+	: LEGENDOPEN text 
+	  LEGENDCLOSE
+	 ; 
+    
+	
+   del_tag
+   : DELOPEN flow
+	 DELCLOSE
+	; 
+   
+   ins_tag
+   : INSOPEN flow
+     INSCLOSE
+	; 
+   
+   map_tag
+   : MAPOPEN map_content 
+	 MAPCLOSE
+	; 
+	
+	map_content 
+	: area_tag
+	;
+	
+	area_tag
+	: AREAOPEN text 
+	  AREACLOSE
+	 ;
+	 
+	 
+    
+    script_tag
+    : SCRIPTOPEN CONTENT 
+    SCRIPTCLOSE
+    ;
+
+   frameset_tag
+    : FRAMESETOPEN 
+    |frameset_content 
+    FRAMESETCLOSE
+    ;
+
+    frameset_content
+    : NOFRAMESOPEN 
+    |noframe_tag 
+    NOFRAMESCLOSE
+    ; 
+    
+    noframe_tag
+    : NOFRAMESOPEN body_content 
+    NOFRAMESCLOSE
+    ;
+	
+	noscript_tag 
+	: NOSCRIPTOPEN text
+	NOSCRIPTCLOSE
+	;
+	
+	object_content 
+	: PARAMOPEN body_content
+	 PARAMCLOSE
+	; 
+	
+	object_tag 
+	: OBJECTOPEN object_content
+	 OBJECTCLOSE
+	; 
+	
+	
+    a_tag
+    : AOPEN 
+    |a_content 
+    ACLOSE 
+    ;
+
+    a_content
+    : text
+    ;
+
+    block
+    : block_content
+    ;
+    
+    block_content
+    : 
+    | basefont_tag 
+    | blockquote_tag 
+    | center_tag 
+    | dir_tag 
+    | div_tag 
+    | dl_tag 
+    | form_tag 
+    | listing_tag 
+    | menu_tag  
+    | ol_tag 
+    | p_tag 
+    | pre_tag 
+    | table_tag 
+    | ul_tag 
+    ;
+    
+    basefont_tag
+    : 
+	BASEFONTOPEN  body_content 
+    BASEFONTCLOSE
+    ;
+    
+    blockquote_tag
+    :
+    BLOCKQUOTEOPEN  body_content 
+    BLOCKQUOTECLOSE
+    ;
+
+    center_tag
+    : 
+	CENTEROPEN body_content 
+    CENTERCLOSE
+    ;
+
+    dir_tag
+    : DIROPEN 
+    | li_tag 
+    DIRCLOSE
+    ;
+
+    div_tag
+    : DIVOPEN body_content 
+    DIVCLOSE
+    ;
+
+    dl_tag
+    : DLOPEN 
+    | dl_content 
+    DLCLOSE
+    ;
+    
+    dl_content
+    : dt_tag dd_tag
+    ;
+
+    dt_tag
+    : DTOPEN 
+    | text 
+    DTCLOSE
+    ;
+
+    dd_tag
+    : DDOPEN 
+    | flow 
+    DDCLOSE
+    ;
+
+    flow
+    : flow_content
+
+    flow_content
+    : block
+    | text
+    ;
+
+    form_tag
+    : FORMOPEN 
+    |form_content 
+    FORMCLOSE
+    ;
+
+	textarea_tag
+	: TEXTAREAOPEN CONTENT 
+	  TEXTAREACLOSE
+	;
+	
+	
+    form_content
+    : INPUTOPEN 
+	| fieldset_tag 
+	| label_tag
+	| textarea_tag
+    | body_content 
+    | select_tag 
+    INPUTCLOSE
+    ;
+	
+	label_tag
+	: LABELOPEN label_content 
+	 FORMCLOSE
+	; 
+	
+	label_content
+	: select_tag
+	;
+	
+
+    listing_tag
+    : LISTINGOPEN 
+    | body_content 
+    LISTINGCLOSE
+    ;
+
+    menu_tag
+    : MENUOPEN 
+    | li_tag 
+    MENUCLOSE
+    ;
+
+   
+	
+     
+     p_tag
+     : POPEN 
+     | text 
+     PCLOSE
+     ;
+
+    pre_tag
+    : PREOPEN 
+    | pre_content 
+    PRECLOSE
+    ;
+
+    pre_content
+    : 
+    | br_tag
+    | hr_tag
+    | a_tag
+    | style_tag
+    ;
+	
+	br_tag 
+	: BROPEN text 
+	 BRCLOSE
+	; 
+	
+	hr_tag
+	: HROPEN text 
+	HRCLOSE
 	;
 
-BASEFONT_TAG 
-	: openbasefont Content closebasefont
-    | openbasefont SIZE Content closebasefont
-	;
-%%
-void yyerror(const char *s) {
-  cout << "EEW, parse error!  Message: " << s << endl;
-  // exit:
-  exit(-1);
-}
+    select_tag
+    :SELECTOPEN 
+    |select_content 
+    SELECTCLOSE
+    ;
 
+    select_content
+    : option_tag
+	| optgroup_tag
+    ;
+
+   style_tag
+   : STYLEOPEN CONTENT STYLECLOSE
+   ;
+
+    option_tag
+    : OPTIONOPEN CONTENT OPTIONCLOSE
+    ;
+
+    ol_tag
+    : OLOPEN 
+    |li_tag 
+    OLCLOSE
+    ;
+	
+	optgroup_tag
+	: OPTGROUPOPEN option_tag
+	OPTGROUPCLOSE
+	; 
+	
+	physical_style 
+	: bdo_tag 
+	| big_tag
+	| font_tag
+	| i_tag
+	| s_tag 
+	| small_tag
+	| span_tag 
+	| strike_tag 
+	| sub_tag
+	| sup_tag
+	| tt_tag 
+	| u_tag 
+	; 
+	
+	s_tag
+	: SOPEN text 
+	 SCLOSE
+	; 
+	
+	span_tag
+	: SPANOPEN text
+	 SPANCLOSE
+	; 
+	
+	strike_tag
+	: STRIKEOPEN text 
+	  STRIKECLOSE 
+	; 
+	
+	tt_tag 
+	: TTOPEN text 
+	  TTCLOSE
+	; 
+	
+	u_tag
+	: UOPEN text 
+	 UCLOSE
+	;
+	
+	
+
+    li_tag 
+    : LIOPEN LICLOSE
+    ;
+
+    p_tag
+    : POPEN text 
+      PCLOSE
+    ;
+
+    table_tag
+    : TABLEOPEN caption_tag colgroup_tag table_content TABLECLOSE
+    ;
+
+    table_content
+    : THEADOPEN 
+    | TBODYOPEN
+    | tr_tag
+    | TBODYCLOSE
+    ;
+
+    tr_tag
+    : TROPEN table_cell TRCLOSE
+    ;
+
+    table_cell
+    : td_tag
+    | th_tag
+    ;
+
+    td_tag
+    : TDOPEN body_content TDCLOSE
+    ;
+
+    th_tag
+    : THOPEN body_content THCLOSE
+    ;
+
+    ul_tag
+    : ULOPEN
+    | li_tag
+    | ULCLOSE
+    ;
+
+    text
+    : text_content
+    ;
+
+    text_content
+    : br_tag
+    | img_tag 
+    | a_tag
+    | physical_style
+	| content_style
+	| applet_tag
+	| noscript_tag
+	| object_tag
+	| CONTENT
+    ;
+	
+	img_tag
+	: IMGOPEN text 
+	IMGCLOSE
+	;
+
+
+    font_tag
+    : FONTOPEN TEXT FONTCLOSE
+    ;
+
+    i_tag
+    : IOPEN TEXT ICLOSE
+    ;
+
+    small_tag
+    : SMALLOPEN TEXT SMALLCLOSE
+    ;
+
+    sub_tag
+    : SUBOPEN TEXT SUBCLOSE
+    ;
+
+    sup_tag
+    : SUPOPEN TEXT SUPCLOSE
+    ;
+	
+	
+
+ %%
+int yyerror(char * s) 
+/* yacc error handler */
+{    
+	printf ( "%s\n", s); 
+	return 0;
+}  
