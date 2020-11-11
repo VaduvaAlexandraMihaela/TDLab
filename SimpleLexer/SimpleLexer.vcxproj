@@ -88,7 +88,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)YY_NO_UNISTD_H</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)YY_NO_UNISTD_H;YY_NO_UNISTD_HYY_NO_UNISTD_H;YY_NO_UNISTD_H;CRT_SECURE_NO_WARNINGS;CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;CRT_NONSTDC_NO_DEPRECATE_CRT_NONSTDC_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -119,7 +119,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)YY_NO_UNISTD_H</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)YY_NO_UNISTD_H;YY_NO_UNISTD_HYY_NO_UNISTD_H;YY_NO_UNISTD_H;CRT_SECURE_NO_WARNINGS;CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;CRT_NONSTDC_NO_DEPRECATE_CRT_NONSTDC_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -153,6 +153,7 @@
     <ClCompile Include="SimpleLexer.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FlexLexer.h" />
     <ClInclude Include="symbols.h" />
   </ItemGroup>
   <ItemGroup>

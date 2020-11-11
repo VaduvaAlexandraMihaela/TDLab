@@ -1,241 +1,226 @@
 #ifndef __SYMBOLS_H__
 #define __SYMBOLS_H__
-#define doctype = 0;
-#define exclamation = 1; 
-#define ENDTAG = 2;
-#define andX = 3; 
-#define opena = 4; 
-#define closea = 5; 
-#define openabbr = 6; 
-#define closeabbr = 7; 
-#define openacronym = 8;
-#define closeacronym = 9; 
-#define openaddress = 10;
-#define closeaddress = 11;
-#define openapplet = 12; 
-#define closeapplet = 13; 
-#define openarea = 14; 
-#define closearea = 15; 
-#define openb = 16; 
-#define closeb = 17; 
-#define openbase = 18;
-#define closebase = 19;
-#define openbasefont = 20; 
-#define closebasefont = 21; 
-#define openbdo = 22; 
-#define closebdo = 23; 
-#define openbig = 24; 
-#define closebig = 25; 
-#define openblockquote = 26; 
-#define closeblockquote = 27; 
-#define openbody = 28; 
-#define closebody = 29; 
-#define openbr = 30; 
-#define closebr = 31; 
-#define openbutton = 32; 
-#define closebutton = 33; 
-#define opencaption = 34; 
-#define closecaption = 35; 
-#define opencenter = 36;
-#define closecenter = 37; 
-#define opencite = 38; 
-#define closecite = 39; 
-#define opencode = 40; 
-#define closecode = 41; 
-#define opencol = 42; 
-#define closecol = 43; 
-#define opencolgroup = 44; 
-#define closecolgroup = 45; 
-#define opendd = 46; 
-#define closedd = 47; 
-#define opendel = 48;
-#define closedel = 49; 
-#define opendfn = 50; 
-#define closedfn = 51; 
-#define opendir = 52; 
-#define closedir = 53; 
-#define opendiv = 54; 
-#define closediv = 55;
-#define opendl = 56; 
-#define closedl = 57; 
-#define opendt = 58;
-#define closedt = 59;
-#define openem = 60;
-#define closeem = 61; 
-#define openfieldset = 62; 
-#define closefieldset = 63; 
-#define openfont = 64; 
-#define closefont = 65;
-#define openform = 66; 
-#define closeform = 67;
-#define openframe = 68; 
-#define closeframe = 69; 
-#define openframeset = 70; 
-#define closeframeset = 71; 
-#define openhead = 72; 
-#define closehead = 73; 
-#define openhn = 74; 
-#define closehn = 75; 
-#define openhr = 76; 
-#define closehr = 77; 
-#define openhtml = 78; 
-#define closehtml = 79; 
-#define openi = 80; 
-#define closei = 81; 
-#define openiframe = 82; 
-#define closeiframe = 83; 
-#define openimg = 84; 
-#define closeimg = 85; 
-#define openinput = 86;
-#define closeinput = 87; 
-#define openins = 88; 
-#define closeins = 89; 
-#define openisindex = 90; 
-#define closeisindex = 91; 
-#define openkbd = 92; 
-#define closekbd = 93; 
-#define openlabel = 94; 
-#define closelabel = 95; 
-#define openlegend = 96; 
-#define closelegend = 97; 
-#define openli = 98; 
-#define closeli = 99; 
-#define openlink = 100; 
-#define closelink = 101; 
-#define openlisting = 102; 
-#define closelisting = 103; 
-#define openmap = 104; 
-#define closemap = 105; 
-#define openmenu = 106;
-#define closemenu = 107; 
-#define openmeta = 108; 
-#define closemeta = 109; 
-#define opennextid = 110; 
-#define closenextid = 111; 
-#define opennoframes = 112; 
-#define closenoframes = 113; 
-#define opennoscript = 114; 
-#define closenoscript = 115; 
-#define openobject = 116; 
-#define closeobject = 117; 
-#define openol = 118; 
-#define closeol = 119; 
-#define openoptgroup = 120; 
-#define closeoptgroup = 121; 
-#define openoption = 122; 
-#define closeoption = 123; 
-#define openp = 124;
-#define closep = 125; 
-#define openparam = 126; 
-#define closeparam = 127; 
-#define openplaintext = 128; 
-#define closeplaintext = 129; 
-#define openpre = 130; 
-#define openq = 131; 
-#define closeq = 132; 
-#define sopen = 133; 
-#define sclose = 134; 
-#define sampopen = 135; 
-#define sampclose = 136; 
-#define scriptopen = 137; 
-#define scriptclose = 138; 
-#define selectopen = 139; 
-#define selectclose = 140; 
-#define smallopen = 141; 
-#define smallclose = 142; 
-#define spanopen = 143; 
-#define spanclose = 144; 
-#define strikeopen = 145; 
-#define strikeclose = 146; 
-#define strongopen = 147; 
-#define strongclose = 148; 
-#define styleopen = 149; 
-#define styleclose = 150; 
-#define subopen = 151; 
-#define subclose = 152; 
-#define supopen = 153; 
-#define supclose = 154; 
-#define tableopen = 155; 
-#define tableclose = 156; 
-#define tbodyopen = 157; 
-#define tbodyclose = 158;
-#define tdopen = 159; 
-#define tdclose = 160; 
-#define textareaopen = 161; 
-#define textareaclose = 162; 
-#define tfootopen = 163; 
-#define tfootclose = 164; 
-#define thopen = 165; 
-#define thclose = 166; 
-#define theadopen = 167; 
-#define theadclose = 168; 
-#define titleopen = 169; 
-#define titleclose = 170; 
-#define tropen = 171; 
-#define trclose = 172; 
-#define ttopen = 173; 
-#define ttclose = 174; 
-#define uopen = 175; 
-#define uclose = 176; 
-#define ulopen = 177; 
-#define ulclose = 178; 
-#define varopen = 179; 
-#define varclose = 180; 
-#define xmpopen = 181; 
-#define xmpclose = 182; 
-#define closepre = 183;
-#define NAME = 184; 
-#define HREF = 185; 
-#define REL = 186; 
-#define REV = 187; 
-#define METHODS = 190; 
-#define SHAPE = 191;
-#define COORDS = 192;  
-#define NOHREF = 194; 
-#define SIZE = 195; 
-#define BGCOLOR = 196; 
-#define BACKGROUND = 197; 
-#define TEXT = 198; 
-#define LINK = 199; 
-#define VLINK = 200; 
-#define ALINK = 201; 
-#define CLEAR = 202; 
-#define COMPACT = 203;  
-#define ALIGN = 204; 
-#define COLOR = 205;
-#define ACTION = 206; 
-#define ENCTYPE = 207; 
-#define WIDTH = 208; 
-#define NOSHADE = 209; 
-#define VERSION = 210; 
-#define SRC = 211; 
-#define HEIGHT = 212; 
-#define VSPACE = 213; 
-#define ALT = 214; 
-#define BORDER = 215; 
-#define USEMAP = 216; 
-#define ISMAP = 217; 
-#define TYPE = 218; 
-#define MAXLENGTH = 219; 
-#define VALUE = 220; 
-#define CHECKED = 221; 
-#define PROMPT = 222; 
-#define URN = 223; 
-#define TITLE = 224; 
-#define ID = 225; 
-#define HTTP_EQUIV = 226; 
-#define CONTENT = 227; 
-#define N = 227; 
-#define START = 228; 
-#define SELECTED = 229; 
-#define MULTIPLE = 230; 
-#define CELLSPACING = 231; 
-#define CELLPADDING = 232; 
-#define ROWSPAN = 233; 
-#define COLSPAN = 234; 
-#define NOWRAP = 234; 
-#define opens = 235; 
-#define closes = 236;
-#define Content = 237;
-#endif
 
+#define ENDTAG 0  
+#define ABBROPEN 1 
+#define ABBRCLOSE 2 
+#define ACRONYMOPEN 3 
+#define ACROBYMCLOSE 4 
+#define ADDRESSOPEN 5 
+#define ADDRESSCLOSE 6
+#define APPLETOPEN 7 
+#define APPLETCLOSE 8 
+#define AREAOPEN 9 
+#define AREACLOSE 10 
+#define BASEOPEN 11 
+#define BASECLOSE 12 
+#define BASEFONTOPEN 13
+#define BASEFONTCLOSE 14 
+#define BDOOPEN 15 
+#define BDOCLOSE 16 
+#define BIGOPEN 17 
+#define BIGCLOSE 18 
+#define BODYOPEN 19
+#define BODYCLOSE 20 
+#define BLOCKQUOTEOPEN 21 
+#define BLOCKQUOTECLOSE 22 
+#define BUTTONOPEN 23 
+#define BUTTONCLOSE 24 
+#define CAPTIONOPEN 25 
+#define CAPTIONCLOSE 26 
+#define CODEOPEN 27
+#define CODECLOSE 28 
+#define COLOPEN 29 
+#define COLCLOSE 30 
+#define COLGROUPOPEN 31 
+#define COLGROUPCLOSE 32 
+#define DDOPEN 33 
+#define DDCLOSE 34 
+#define DELOPEN 35 
+#define DELCLOSE 36 
+#define DFNOPEN 37 
+#define DFNCLOSE 38 
+#define DIROPEN 39 
+#define DIRCLOSE 40 
+#define DIVOPEN 41 
+#define DIVCLOSE 42 
+#define DLOPEN 43 
+#define DLCLOSE 44 
+#define DTOPEN 45 
+#define DTCLOSE 46 
+#define EMOPEN 47 
+#define EMCLOSE 48 
+#define FIELDSETOPEN 49 
+#define FIELDSETCLOSE 50 
+#define FRAMEOPEN 51 
+#define FRAMECLOSE 52 
+#define FRAMESETOPEN 53 
+#define FRAMESETCLOSE 54 
+#define NOFRAMESOPEN 55 
+#define NOFRAMESCLOSE 56 
+#define FORMOPEN 57 
+#define FORMCLOSE 58 
+#define HEADOPEN 59 
+#define HEADCLOSE 60 
+#define HNOPEN 61 
+#define HNCLOSE 62 
+#define HTMLOPEN 63 
+#define HTMLCLOSE 64 
+#define INPUTOPEN 65 
+#define INPUTCLOSE 66 
+#define IFRAMEOPEN 67 
+#define IFRAMECLOSE 68 
+#define INSOPEN 69 
+#define INSCLOSE 70 
+#define KBDOPEN 71 
+#define KBDCLOSE 72 
+#define LABELOPEN 73 
+#define LABELCLOSE 74 
+#define LEGENDOPEN 75 
+#define LEGENDCLOSE 76 
+#define LISTINGOPEN 77 
+#define LISTINGCLOSE 78 
+#define MAPOPEN 79 
+#define MAPCLOSE 80 
+#define MENUOPEN 81 
+#define MENUCLOSE 82 
+#define METAOPEN 83 
+#define METACLOSE 84 
+#define NEXTIDOPEN 85 
+#define NEXTIDCLOSE 86 
+#define NOSCRIPTOPEN 87 
+#define NOSCRIPTCLOSE 88
+#define SELECTOPEN 89 
+#define SELECTCLOSE 90 
+#define OPTIONOPEN 91 
+#define OPTIONCLOSE 92 
+#define OBJECTOPEN 93 
+#define OBJECTCLOSE 94 
+#define OPTGROUPOPEN 95 
+#define OPTGROUPCLOSE 96 
+#define PARAMOPEN 97 
+#define PARAMCLOSE 98 
+#define PLAINTEXTOPEN 99 
+#define PLAINTEXTCLOSE 100 
+#define PREOPEN 101
+#define PRECLOSE 102 
+#define QOPEN 103 
+#define QCLOSE 104 
+#define SOPEN 105 
+#define SCLOSE 106 
+#define SAMPOPEN 107 
+#define SAMPCLOSE 108 
+#define SCRIPTOPEN 109 
+#define SCRIPTCLOSE 110 
+#define SPANOPEN 111 
+#define SPANCLOSE 112 
+#define STRIKEOPEN 113 
+#define STRIKECLOSE 114 
+#define STRONGOPEN 115 
+#define STRONGCLOSE 116 
+#define STYLEOPEN 117 
+#define STYLECLOSE 118 
+#define TABLEOPEN 119 
+#define TABLECLOSE 120 
+#define TROPEN 121 
+#define TRCLOSE 122 
+#define TDOPEN 123 
+#define TDCLOSE 124 
+#define THOPEN 125 
+#define THCLOSE 126 
+#define THEADOPEN 127 
+#define THEADCLOSE 128 
+#define TBODYOPEN 129 
+#define TBODYCLOSE 130 
+#define TEXTAREAOPEN 131 
+#define TEXTAREACLOSE 132 
+#define TFOOTOPEN 133 
+#define TFOOTCLOSE 134 
+#define TITLEOPEN 135 
+#define TITLECLOSE 136 
+#define TTOPEN 137 
+#define TTCLOSE 138 
+#define IMGOPEN 139 
+#define IMGCLOSE 140 
+#define AOPEN 141 
+#define ACLOSE 142 
+#define LINKOPEN 143 
+#define LINKCLOSE 144 
+#define ULOPEN 145 
+#define ULCLOSE 146 
+#define LIOPEN 147 
+#define LICLOSE 148 
+#define OLOPEN 149 
+#define OLCLOSE 150 
+#define POPEN 151 
+#define PCLOSE 152 
+#define IOPEN 153 
+#define ICLOSE 154 
+#define UOPEN 155 
+#define UCLOSE 156 
+#define SMALLOPEN 157 
+#define SMALLCLOSE 158 
+#define SUPOPEN 159 
+#define SUPCLOSE 160 
+#define SUBOPEN 161 
+#define SUBCLOSE 162 
+#define CENTEROPEN 163 
+#define CENTERCLOSE 164   
+#define FONTOPEN 165 
+#define FONTCLOSE 166 
+#define HROPEN 167 
+#define HRCLOSE 168 
+#define BROPEN 171 
+#define BRCLOSE 172 
+#define NAME 173 
+#define HREF 174 
+#define REL 175 
+#define REV 176 
+#define TITLE 177 
+#define URN 178 
+#define METHODS 179  
+#define SHAPE 180 
+#define COORDS 181 
+#define ALT 182 
+#define NOHREF 183 
+#define BGCOLOR 184 
+#define BACKGROUND 185 
+#define TEXT 186 
+#define LINK 187 
+#define VLINK 188 
+#define ALINK 189 
+#define CLEAR 190 
+#define COMPACT 191 
+#define ALIGN 192 
+#define SIZE 193 
+#define COLOR 194 
+#define ACTION 195 
+#define ENCTYPE 196 
+#define WIDTH 197 
+#define NOSHADE 198
+#define VERSION 199 
+#define SRC 200
+#define HEIGHT 201
+#define VSPACE 202 
+#define BORDER 203
+#define USEMAP 204
+#define ISMAP 205
+#define TYPE 206
+#define MAXLENGTH 207
+#define VALUE 208 
+#define CHECKED 209 
+#define PROMPT 210
+#define ID 211
+#define HTTP_EQUIV 212 
+#define CONTENT 213
+#define N 214
+#define START 215 
+#define SELECTED 216 
+#define MULTIPLE 217 
+#define CELLSPACING 218 
+#define CELLPADDING 219 
+#define ROWSPAN 220
+#define COLSPAN 221
+#define NOWRAP 222
+#define IDENTIFIER 223
+#endif
