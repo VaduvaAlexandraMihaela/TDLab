@@ -227,6 +227,8 @@
 %token NOWRAP
 %token IDENTIFIER
 %token END_OF_INSTRUCTION
+%token BOPEN 
+%token BCLOSE
   
 %start htmldocument
 %%
@@ -454,8 +456,7 @@ html_tag
 	
 	
     a_tag
-    : AOPEN 
-    |a_content 
+    : AOPEN a_content 
     ACLOSE 
     ;
 
@@ -469,7 +470,7 @@ html_tag
     
     block_content
     : 
-    | basefont_tag 
+	| basefont_tag 
     | blockquote_tag 
     | center_tag 
     | dir_tag 
@@ -545,8 +546,7 @@ html_tag
     ;
 
     form_tag
-    : FORMOPEN 
-    |form_content 
+    : FORMOPEN form_content 
     FORMCLOSE
     ;
 
@@ -588,18 +588,13 @@ html_tag
     MENUCLOSE
     ;
 
-   
-	
-     
-     p_tag
-     : POPEN 
-     | text 
-     PCLOSE
-     ;
+    p_tag
+    : POPEN  text 
+    PCLOSE
+    ;
 
     pre_tag
-    : PREOPEN 
-    | pre_content 
+    : PREOPEN  pre_content 
     PRECLOSE
     ;
 
@@ -612,8 +607,7 @@ html_tag
     ;
 	
 	br_tag 
-	: BROPEN text 
-	 BRCLOSE
+	: BROPEN
 	; 
 	
 	hr_tag
@@ -641,8 +635,7 @@ html_tag
     ;
 
     ol_tag
-    : OLOPEN 
-    |li_tag 
+    : OLOPEN li_tag 
     OLCLOSE
     ;
 	
@@ -697,11 +690,6 @@ html_tag
     : LIOPEN LICLOSE
     ;
 
-    p_tag
-    : POPEN text 
-      PCLOSE
-    ;
-
     table_tag
     : TABLEOPEN caption_tag colgroup_tag table_content TABLECLOSE
     ;
@@ -738,6 +726,7 @@ html_tag
 
     text
     : text_content
+	| text text_content
     ;
 
     text_content
@@ -759,23 +748,23 @@ html_tag
 
 
     font_tag
-    : FONTOPEN TEXT FONTCLOSE
+    : FONTOPEN text FONTCLOSE
     ;
 
     i_tag
-    : IOPEN TEXT ICLOSE
+    : IOPEN text ICLOSE
     ;
 
     small_tag
-    : SMALLOPEN TEXT SMALLCLOSE
+    : SMALLOPEN text SMALLCLOSE
     ;
 
     sub_tag
-    : SUBOPEN TEXT SUBCLOSE
+    : SUBOPEN text SUBCLOSE
     ;
 
     sup_tag
-    : SUPOPEN TEXT SUPCLOSE
+    : SUPOPEN text SUPCLOSE
     ;
 	
 	

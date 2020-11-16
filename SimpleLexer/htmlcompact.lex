@@ -230,7 +230,6 @@ VALUE 			(?i:value=\"[^\"]*\")
 CHECKED 		(?i:checked)
 PROMPT 			(?i:prompt=\"[^\"]*\")
 HTTP-EQUIV 		(?i:http-equiv=\"[^\"]*\")
-CONTENT 		(?i:>[^<]*)
 N 				(?i:n=\"[^\"]*\")
 START 			(?i:start=\"[^\"]*\")
 SELECTED 		(?i:selected)
@@ -240,6 +239,7 @@ CELLPADDING 	(?i:cellpadding=\"[^\"]*\")
 ROWSPAN 		(?i:rowspan=\"[^\"]*\")
 COLSPAN 		(?i:colspan=\"[^\"]*\")
 NOWRAP 			(?i:nowrap)
+CONTENT 		(?i:([A-Za-z_\-0-9])+)
 
 
 %%
@@ -397,8 +397,8 @@ NOWRAP 			(?i:nowrap)
 {li_close}          {count(); return(LICLOSE);}
 {ol_open}           {count(); return(OLOPEN); }
 {ol_close}          {count(); return(OLCLOSE); }
-{b_open}            {count(); return(POPEN); }
-{b_close}           {count(); return(PCLOSE); }
+{b_open}            {count(); return(BOPEN); }
+{b_close}           {count(); return(BCLOSE); }
 {i_open}            {count(); return(IOPEN); }
 {i_close}           {count(); return(ICLOSE); }
 {u_open}            {count(); return(UOPEN); }

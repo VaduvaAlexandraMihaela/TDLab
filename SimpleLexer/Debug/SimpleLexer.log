@@ -1,7 +1,10 @@
-﻿  htmlcompact.tab.c
+﻿  htmlcompact.lex:465: warning, rule cannot be matched
+  htmlcompact.lex:466: warning, rule cannot be matched
+  htmlcompact.lex:471: warning, rule cannot be matched
+  htmlcompact.tab.c
   lex.yy.c
 htmlcompact.lex(246): warning C4013: 'comment' undefined; assuming extern returning int
-lex.yy.c(3230): warning C4013: 'isatty' undefined; assuming extern returning int
+lex.yy.c(3229): warning C4013: 'isatty' undefined; assuming extern returning int
   SimpleLexer.c
   Generating Code...
 c:\simplelexer\simplelexer\htmlcompact.lex(502): warning C4716: 'comment': must return a value

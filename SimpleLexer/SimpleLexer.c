@@ -233,7 +233,9 @@ const char* symbols[] = {
 "ROWSPAN",
 "COLSPAN",
 "NOWRAP",
-"END_OF_INSTRUCTION"};
+"END_OF_INSTRUCTION"
+"BOPEN"
+"BCLOSE"};
 
 int main()
 {

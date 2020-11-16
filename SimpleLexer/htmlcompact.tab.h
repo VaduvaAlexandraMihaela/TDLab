@@ -276,7 +276,9 @@ extern int yydebug;
     COLSPAN = 477,                 /* COLSPAN  */
     NOWRAP = 478,                  /* NOWRAP  */
     IDENTIFIER = 479,              /* IDENTIFIER  */
-    END_OF_INSTRUCTION = 480       /* END_OF_INSTRUCTION  */
+    END_OF_INSTRUCTION = 480,      /* END_OF_INSTRUCTION  */
+    BOPEN = 481,                   /* BOPEN  */
+    BCLOSE = 482                   /* BCLOSE  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
