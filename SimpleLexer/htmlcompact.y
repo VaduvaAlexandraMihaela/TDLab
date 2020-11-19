@@ -313,11 +313,15 @@ html_tag
 	
 
     body_tag
-    : BODYOPEN body_content 
+    : BODYOPEN body_content_list 
       BODYCLOSE
     ;
 
-   
+   body_content_list
+   : body_content 
+   | body_content_list body_content
+   | 
+   ;
 	
 	
 	caption_tag 

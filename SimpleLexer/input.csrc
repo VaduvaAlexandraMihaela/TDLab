@@ -17,12 +17,13 @@
   <strong>strong text</strong>
   <em>em</em>
   <img>imagine</img>
-  <font>cica font dar nush ce tre sa fie in fata</font>
+  <font>text</font>
   <small>small text</small>
   <sup>text</sup>
   <sub>text</sub>
   <abbr>abbr</abbr>
   <acronym>text acroniiim</acronym>
-  <hr>bODYCONTENT</hr>
+  <p>PARAGRAF</p>
+  <hr>
 </body>
 </html>
