@@ -1,6 +1,8 @@
 ﻿  htmlcompact.lex:465: warning, rule cannot be matched
   htmlcompact.lex:466: warning, rule cannot be matched
   htmlcompact.lex:471: warning, rule cannot be matched
+htmlcompact.y : warning : 15 reduce/reduce conflicts [-Wconflicts-rr]
+  htmlcompact.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
   htmlcompact.tab.c
   lex.yy.c
 htmlcompact.lex(246): warning C4013: 'comment' undefined; assuming extern returning int

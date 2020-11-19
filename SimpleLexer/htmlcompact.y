@@ -8,7 +8,7 @@
 %token ABBROPEN 
 %token ABBRCLOSE 
 %token ACRONYMOPEN 
-%token ACROBYMCLOSE 
+%token ACRONYMCLOSE 
 %token ADDRESSOPEN
 %token ADDRESSCLOSE 
 %token APPLETOPEN
@@ -267,7 +267,7 @@ html_tag
 	
 	acronym_tag
 	: ACRONYMOPEN text
-	  ACROBYMCLOSE
+	  ACRONYMCLOSE
 	;
 	
 	address_tag
@@ -286,7 +286,8 @@ html_tag
 	;
 	
 	body_content
-    : hr_tag
+    : 
+	| hr_tag
 	| address_tag
     | block 
 	| del_tag
@@ -505,8 +506,7 @@ html_tag
     ;
 
     dir_tag
-    : DIROPEN 
-    | li_tag 
+    : DIROPEN li_tag 
     DIRCLOSE
     ;
 
@@ -516,8 +516,7 @@ html_tag
     ;
 
     dl_tag
-    : DLOPEN 
-    | dl_content 
+    : DLOPEN  dl_content 
     DLCLOSE
     ;
     
@@ -526,14 +525,12 @@ html_tag
     ;
 
     dt_tag
-    : DTOPEN 
-    | text 
+    : DTOPEN text 
     DTCLOSE
     ;
 
     dd_tag
-    : DDOPEN 
-    | flow 
+    : DDOPEN flow 
     DDCLOSE
     ;
 
@@ -577,14 +574,12 @@ html_tag
 	
 
     listing_tag
-    : LISTINGOPEN 
-    | body_content 
+    : LISTINGOPEN CONTENT
     LISTINGCLOSE
     ;
 
     menu_tag
-    : MENUOPEN 
-    | li_tag 
+    : MENUOPEN li_tag 
     MENUCLOSE
     ;
 
@@ -611,13 +606,11 @@ html_tag
 	; 
 	
 	hr_tag
-	: HROPEN text 
-	HRCLOSE
+	: HROPEN
 	;
 
     select_tag
-    :SELECTOPEN 
-    |select_content 
+    :SELECTOPEN select_content 
     SELECTCLOSE
     ;
 
@@ -687,7 +680,7 @@ html_tag
 	
 
     li_tag 
-    : LIOPEN LICLOSE
+    : LIOPEN flow LICLOSE
     ;
 
     table_tag
@@ -719,9 +712,8 @@ html_tag
     ;
 
     ul_tag
-    : ULOPEN
-    | li_tag
-    | ULCLOSE
+    : ULOPEN li_tag
+     ULCLOSE
     ;
 
     text

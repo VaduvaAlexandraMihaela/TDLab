@@ -58,7 +58,7 @@ extern int yydebug;
     ABBROPEN = 259,                /* ABBROPEN  */
     ABBRCLOSE = 260,               /* ABBRCLOSE  */
     ACRONYMOPEN = 261,             /* ACRONYMOPEN  */
-    ACROBYMCLOSE = 262,            /* ACROBYMCLOSE  */
+    ACRONYMCLOSE = 262,            /* ACRONYMCLOSE  */
     ADDRESSOPEN = 263,             /* ADDRESSOPEN  */
     ADDRESSCLOSE = 264,            /* ADDRESSCLOSE  */
     APPLETOPEN = 265,              /* APPLETOPEN  */

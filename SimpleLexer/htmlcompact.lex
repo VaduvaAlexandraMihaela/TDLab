@@ -13,7 +13,7 @@ image [/img/ig]
 abbr_open_tag 	 (?:<abbr>)
 abbr_close_tag 	 (?:<\/abbr>)
 acronym_open_tag (?:<acronym>)
-acronym_close_tag (?:<\/acronym)
+acronym_close_tag (?:<\/acronym>)
 address_open_tag (?:<address>)
 address_close_tag (?:\/address)
 applet_open_tag (?:<applet>)
@@ -250,7 +250,7 @@ CONTENT 		(?i:([A-Za-z_\-0-9])+)
 {abbr_open_tag}		{count(); return(ABBROPEN); }
 {abbr_close_tag}	{count(); return(ABBRCLOSE); }
 {acronym_open_tag}	{count(); return (ACRONYMOPEN); }
-{acronym_close_tag}	{count(); return (ACROBYMCLOSE); }
+{acronym_close_tag}	{count(); return (ACRONYMCLOSE); }
 {address_open_tag}	{count(); return (ADDRESSOPEN); }
 {address_close_tag}	{count(); return (ADDRESSCLOSE); }
 {applet_open_tag}	{count(); return (APPLETOPEN); }

@@ -7,8 +7,22 @@
   <a>text</a>
   
     <i>italic text</i>
-    <address>
-      <p>text</p>
-    </address>
+  <applet></applet>
+  <bdo></bdo>
+  <big>text</big>
+  <code>code</code>
+  <dfn>dfn</dfn>
+  <kbd>kbd</kbd>
+  <q>q tag</q>
+  <strong>strong text</strong>
+  <em>em</em>
+  <img>imagine</img>
+  <font>cica font dar nush ce tre sa fie in fata</font>
+  <small>small text</small>
+  <sup>text</sup>
+  <sub>text</sub>
+  <abbr>abbr</abbr>
+  <acronym>text acroniiim</acronym>
+  <hr>bODYCONTENT</hr>
 </body>
 </html>
