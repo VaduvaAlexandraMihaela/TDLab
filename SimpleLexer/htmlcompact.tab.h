@@ -278,7 +278,8 @@ extern int yydebug;
     IDENTIFIER = 479,              /* IDENTIFIER  */
     END_OF_INSTRUCTION = 480,      /* END_OF_INSTRUCTION  */
     BOPEN = 481,                   /* BOPEN  */
-    BCLOSE = 482                   /* BCLOSE  */
+    BCLOSE = 482,                  /* BCLOSE  */
+    VALIGN = 483                   /* VALIGN  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif

@@ -4,26 +4,9 @@
   
 <body>
   
-  <a>text</a>
-  
-    <i>italic text</i>
-  <applet></applet>
-  <bdo></bdo>
-  <big>text</big>
-  <code>code</code>
-  <dfn>dfn</dfn>
-  <kbd>kbd</kbd>
-  <q>q tag</q>
-  <strong>strong text</strong>
-  <em>em</em>
-  <img>imagine</img>
-  <font>text</font>
-  <small>small text</small>
-  <sup>text</sup>
-  <sub>text</sub>
-  <abbr>abbr</abbr>
-  <acronym>text acroniiim</acronym>
-  <p>PARAGRAF</p>
-  <hr>
+  <a name="ceva" >text</a>
+  <a href="link" >link</a>
+  <a name="idk" href="link2">sper sa mergi</a>
+  <p>paragraf</p>
 </body>
 </html>

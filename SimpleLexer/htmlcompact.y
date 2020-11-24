@@ -229,6 +229,7 @@
 %token END_OF_INSTRUCTION
 %token BOPEN 
 %token BCLOSE
+%token VALIGN
   
 %start htmldocument
 %%
@@ -238,10 +239,12 @@ htmldocument
     ;
 
 html_tag
-    : HTMLOPEN   
+    : HTMLOPEN ENDTAG  
       html_content  
       HTMLCLOSE
+	  | HTMLOPEN ENDTAG VERSION html_content HTMLCLOSE
     ;
+
 
     html_content
     : head_tag body_tag 
@@ -313,9 +316,15 @@ html_tag
 	
 
     body_tag
-    : BODYOPEN body_content_list 
+    : BODYOPEN ENDTAG body_content_list 
       BODYCLOSE
+	 | BODYOPEN body_attr ENDTAG body_content_list BODYCLOSE
     ;
+
+	body_attr
+	: BGCOLOR | BACKGROUND | TEXT | LINK | VLINK | ALINK
+	| body_attr BGCOLOR | body_attr BACKGROUND | body_attr TEXT | body_attr LINK | body_attr VLINK | body_attr ALINK
+	;
 
    body_content_list
    : body_content 
@@ -407,8 +416,9 @@ html_tag
 	; 
    
    map_tag
-   : MAPOPEN map_content 
+   : MAPOPEN ENDTAG map_content 
 	 MAPCLOSE
+	| MAPOPEN NAME ENDTAG map_content MAPCLOSE
 	; 
 	
 	map_content 
@@ -416,10 +426,15 @@ html_tag
 	;
 	
 	area_tag
-	: AREAOPEN text 
-	  AREACLOSE
-	 ;
+	: AREAOPEN ENDTAG text 
+	AREACLOSE
+	| AREAOPEN area_attr ENDTAG text AREACLOSE
+	;
 	 
+	area_attr
+	: SHAPE | COORDS | HREF | ALT | NOHREF 
+	| area_attr SHAPE | area_attr COORDS | area_attr HREF | area_attr ALT | area_attr NOHREF
+	;
 	 
     
     script_tag
@@ -429,13 +444,13 @@ html_tag
 
    frameset_tag
     : FRAMESETOPEN 
-    |frameset_content 
+     frameset_content 
     FRAMESETCLOSE
     ;
 
     frameset_content
     : NOFRAMESOPEN 
-    |noframe_tag 
+     noframe_tag 
     NOFRAMESCLOSE
     ; 
     
@@ -461,8 +476,9 @@ html_tag
 	
 	
     a_tag
-    : AOPEN a_content 
-    ACLOSE 
+    : AOPEN ENDTAG a_content 
+    ACLOSE
+	| AOPEN a_attr ENDTAG a_content ACLOSE
     ;
 
     a_content
@@ -493,8 +509,9 @@ html_tag
     
     basefont_tag
     : 
-	BASEFONTOPEN  body_content 
+	BASEFONTOPEN ENDTAG body_content 
     BASEFONTCLOSE
+	| BASEFONTOPEN HREF ENDTAG body_content BASEFONTCLOSE
     ;
     
     blockquote_tag
@@ -510,18 +527,21 @@ html_tag
     ;
 
     dir_tag
-    : DIROPEN li_tag 
+    : DIROPEN ENDTAG li_tag 
     DIRCLOSE
+	| DIROPEN COMPACT ENDTAG li_tag DIRCLOSE
     ;
 
     div_tag
-    : DIVOPEN body_content 
+    : DIVOPEN ENDTAG body_content 
     DIVCLOSE
+	| DIVOPEN ALIGN ENDTAG body_content DIVCLOSE
     ;
 
     dl_tag
-    : DLOPEN  dl_content 
+    : DLOPEN  ENDTAG dl_content 
     DLCLOSE
+	| DLOPEN COMPACT ENDTAG dl_content DLCLOSE
     ;
     
     dl_content
@@ -547,9 +567,15 @@ html_tag
     ;
 
     form_tag
-    : FORMOPEN form_content 
+    : FORMOPEN ENDTAG form_content 
     FORMCLOSE
+	| FORMOPEN form_attr ENDTAG form_content FORMCLOSE
     ;
+
+	form_attr
+	: ACTION | METHODS | ENCTYPE 
+	| form_attr ACTION | form_attr METHODS | form_attr ENCTYPE
+	;
 
 	textarea_tag
 	: TEXTAREAOPEN CONTENT 
@@ -583,18 +609,21 @@ html_tag
     ;
 
     menu_tag
-    : MENUOPEN li_tag 
+    : MENUOPEN ENDTAG li_tag 
     MENUCLOSE
+	| MENUOPEN NAME ENDTAG li_tag MENUCLOSE
     ;
 
     p_tag
-    : POPEN  text 
+    : POPEN ENDTAG text 
     PCLOSE
+	| POPEN ALIGN ENDTAG text PCLOSE
     ;
 
     pre_tag
-    : PREOPEN  pre_content 
+    : PREOPEN ENDTAG pre_content 
     PRECLOSE
+	| PREOPEN ALIGN ENDTAG pre_content PRECLOSE
     ;
 
     pre_content
@@ -606,11 +635,17 @@ html_tag
     ;
 	
 	br_tag 
-	: BROPEN
+	: BROPEN ENDTAG CLEAR 
 	; 
 	
 	hr_tag
-	: HROPEN
+	: HROPEN ENDTAG 
+	| HROPEN hr_attr ENDTAG 
+	;
+
+	hr_attr
+	: ALIGN | SIZE | WIDTH | NOSHADE
+	| hr_attr ALIGN | hr_attr SIZE | hr_attr WIDTH | hr_attr NOSHADE
 	;
 
     select_tag
@@ -628,13 +663,25 @@ html_tag
    ;
 
     option_tag
-    : OPTIONOPEN CONTENT OPTIONCLOSE
+    : OPTIONOPEN ENDTAG CONTENT OPTIONCLOSE
+	| OPTIONOPEN option_attr ENDTAG CONTENT OPTIONCLOSE
     ;
 
+	option_attr
+	: SELECTED | VALUE 
+	| option_attr SELECTED | option_attr VALUE
+	;
+
     ol_tag
-    : OLOPEN li_tag 
+    : OLOPEN  ENDTAG li_tag 
     OLCLOSE
+	| OLOPEN ol_attr ENDTAG li_tag OLCLOSE
     ;
+
+	ol_attr
+	: TYPE | START | COMPACT 
+	| ol_attr TYPE | ol_attr START | ol_attr COMPACT
+	;
 	
 	optgroup_tag
 	: OPTGROUPOPEN option_tag
@@ -684,12 +731,24 @@ html_tag
 	
 
     li_tag 
-    : LIOPEN flow LICLOSE
+    : LIOPEN ENDTAG flow LICLOSE
+	| LIOPEN li_attr ENDTAG flow LICLOSE 
     ;
 
+	li_attr
+	: TYPE | VALUE 
+	| li_attr TYPE | li_attr VALUE
+	;
+
     table_tag
-    : TABLEOPEN caption_tag colgroup_tag table_content TABLECLOSE
+    : TABLEOPEN ENDTAG caption_tag colgroup_tag table_content TABLECLOSE
+	| TABLEOPEN table_attr ENDTAG caption_tag colgroup_tag table_content TABLECLOSE
     ;
+
+	table_attr 
+	: ALIGN | BORDER | WIDTH | CELLSPACING | CELLPADDING 
+	| table_attr ALIGN | table_attr BORDER | table_attr WIDTH | table_attr CELLSPACING | table_attr CELLPADDING
+	;
 
     table_content
     : THEADOPEN 
@@ -699,8 +758,14 @@ html_tag
     ;
 
     tr_tag
-    : TROPEN table_cell TRCLOSE
+    : TROPEN ENDTAG table_cell TRCLOSE
+	| TROPEN tr_attr ENDTAG table_cell TRCLOSE
     ;
+
+	tr_attr
+	: ALIGN | VALIGN 
+	| tr_attr ALIGN | tr_attr VALIGN 
+	;
 
     table_cell
     : td_tag
@@ -708,17 +773,35 @@ html_tag
     ;
 
     td_tag
-    : TDOPEN body_content TDCLOSE
+    : TDOPEN ENDTAG body_content TDCLOSE
+	| TDOPEN td_attr ENDTAG body_content TDCLOSE
     ;
+
+	td_attr
+	: ALIGN | VALIGN | ROWSPAN | COLSPAN | WIDTH | HEIGHT | NOWRAP 
+	| td_attr ALIGN | td_attr VALIGN | td_attr ROWSPAN | td_attr COLSPAN | td_attr WIDTH | td_attr HEIGHT | td_attr NOWRAP
+	;
 
     th_tag
-    : THOPEN body_content THCLOSE
+    : THOPEN ENDTAG body_content THCLOSE
+	| THOPEN th_attr ENDTAG body_content THCLOSE
     ;
 
+	th_attr
+	: ALIGN | VALIGN | ROWSPAN | COLSPAN | WIDTH | HEIGHT | NOWRAP 
+	| th_attr ALIGN | th_attr VALIGN | th_attr ROWSPAN | th_attr COLSPAN | th_attr WIDTH | th_attr HEIGHT | th_attr NOWRAP
+	;
+
     ul_tag
-    : ULOPEN li_tag
+    : ULOPEN ENDTAG li_tag
      ULCLOSE
+	 | ULOPEN ul_attr ENDTAG li_tag ULCLOSE
     ;
+
+	ul_attr
+	: TYPE | COMPACT 
+	| ul_attr TYPE | ul_attr COMPACT 
+	;
 
     text
     : text_content
@@ -738,13 +821,22 @@ html_tag
     ;
 	
 	img_tag
-	: IMGOPEN text 
+	: IMGOPEN SRC ENDTAG text 
 	IMGCLOSE
+	| IMGOPEN img_attr ENDTAG text 
+	IMGCLOSE
+	;
+
+	img_attr
+	: ALIGN | WIDTH | HEIGHT | VSPACE | ALT | BORDER | USEMAP | ISMAP 
+	| img_attr ALIGN | img_attr WIDTH | img_attr HEIGHT | img_attr VSPACE | img_attr ALT | img_attr BORDER | img_attr USEMAP | img_attr ISMAP
 	;
 
 
     font_tag
-    : FONTOPEN text FONTCLOSE
+    : FONTOPEN ENDTAG text FONTCLOSE
+	| FONTOPEN SIZE ENDTAG text FONTCLOSE
+	| FONTOPEN COLOR ENDTAG text FONTCLOSE
     ;
 
     i_tag
@@ -763,7 +855,10 @@ html_tag
     : SUPOPEN text SUPCLOSE
     ;
 	
-	
+	a_attr
+	: NAME | HREF | REL | REV | TITLE | URN | METHODS
+	| a_attr NAME | a_attr HREF | a_attr REL | a_attr REV | a_attr TITLE | a_attr URN | a_attr METHODS
+	;
 
  %%
 int yyerror(char * s) 
