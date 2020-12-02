@@ -157,11 +157,13 @@ win_bison htmlcompact.y --defines</Command>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ast.c" />
     <ClCompile Include="htmlcompact.tab.c" />
     <ClCompile Include="lex.yy.c" />
     <ClCompile Include="SimpleLexer.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ast.h" />
     <ClInclude Include="FlexLexer.h" />
     <ClInclude Include="htmlcompact.tab.h" />
     <ClInclude Include="resource.h" />

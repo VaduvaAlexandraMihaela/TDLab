@@ -1,17 +1,7 @@
-﻿  htmlcompact.lex:466: warning, rule cannot be matched
-  htmlcompact.lex:467: warning, rule cannot be matched
-  htmlcompact.lex:472: warning, rule cannot be matched
-htmlcompact.y : warning : 213 shift/reduce conflicts [-Wconflicts-sr]
-htmlcompact.y : warning : 301 reduce/reduce conflicts [-Wconflicts-rr]
-  htmlcompact.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
-  htmlcompact.y:332.5: warning: rule useless in parser due to conflicts [-Wother]
-    332 |    | 
-        |     ^
-  htmlcompact.tab.c
-  lex.yy.c
-htmlcompact.lex(247): warning C4013: 'comment' undefined; assuming extern returning int
-lex.yy.c(3235): warning C4013: 'isatty' undefined; assuming extern returning int
-  SimpleLexer.c
-  Generating Code...
-c:\simplelexer\simplelexer\htmlcompact.lex(503): warning C4716: 'comment': must return a value
-  SimpleLexer.vcxproj -> C:\SimpleLexer\Debug\SimpleLexer.exe
+﻿  'win_flex' is not recognized as an internal or external command,
+  operable program or batch file.
+  'win_bison' is not recognized as an internal or external command,
+  operable program or batch file.
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(128,5): error MSB3073: The command "win_flex htmlcompact.lex
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(128,5): error MSB3073: win_bison htmlcompact.y --defines
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(128,5): error MSB3073: :VCEnd" exited with code 9009.

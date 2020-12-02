@@ -1,5 +1,6 @@
 %{
 #include <stdio.h>
+#include "ast.h"
 #include "htmlcompact.tab.h"
 
 void count();
