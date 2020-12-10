@@ -72,9 +72,20 @@ Node* createTagNode(const char* tagName, Node* tag_cont)
 	return retNode;
 }
 
-Node* createTagWithAttribute(const char* tagName, Node* attribute_list, Node* tag_cont)
+Node* createAttributeNode(const char* attributeName, Node* tag_cont)
 {
-	Node* retNode = createDefaultNode(tagName, 1);
+	Node* retNode = createDefaultNode(attributeName, 1); 
+	if (retNode)
+	{
+		retNode->links[0] = tag_cont; 
+	}
+
+	return retNode;
+}
+
+Node* createTagWithAttribute(const char* tagName, Node* attribute, Node* tag_cont)
+{
+	Node* retNode = createDefaultNode(tagName, 2);
 	if (retNode)
 	{
 		retNode->links[0] = tag_cont;

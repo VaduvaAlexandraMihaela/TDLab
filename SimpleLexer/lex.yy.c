@@ -1190,11 +1190,12 @@ char *yytext;
 #line 1 "htmlcompact.lex"
 #line 2 "htmlcompact.lex"
 #include <stdio.h>
+#include "ast.h"
 #include "htmlcompact.tab.h"
 
 void count();
-#line 1196 "lex.yy.c"
 #line 1197 "lex.yy.c"
+#line 1198 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -1411,9 +1412,9 @@ YY_DECL
 		}
 
 	{
-#line 246 "htmlcompact.lex"
+#line 247 "htmlcompact.lex"
 
-#line 1416 "lex.yy.c"
+#line 1417 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -1472,1186 +1473,1186 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 247 "htmlcompact.lex"
+#line 248 "htmlcompact.lex"
 { comment(); }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 248 "htmlcompact.lex"
+#line 249 "htmlcompact.lex"
 {count(); return(ENDTAG); }  
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 250 "htmlcompact.lex"
+#line 251 "htmlcompact.lex"
 {count(); return(VALIGN); }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 251 "htmlcompact.lex"
+#line 252 "htmlcompact.lex"
 {count(); return(ABBROPEN); }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 252 "htmlcompact.lex"
+#line 253 "htmlcompact.lex"
 {count(); return(ABBRCLOSE); }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 253 "htmlcompact.lex"
+#line 254 "htmlcompact.lex"
 {count(); return (ACRONYMOPEN); }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 254 "htmlcompact.lex"
+#line 255 "htmlcompact.lex"
 {count(); return (ACRONYMCLOSE); }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 255 "htmlcompact.lex"
+#line 256 "htmlcompact.lex"
 {count(); return (ADDRESSOPEN); }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 256 "htmlcompact.lex"
+#line 257 "htmlcompact.lex"
 {count(); return (ADDRESSCLOSE); }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 257 "htmlcompact.lex"
+#line 258 "htmlcompact.lex"
 {count(); return (APPLETOPEN); }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 258 "htmlcompact.lex"
+#line 259 "htmlcompact.lex"
 {count(); return (APPLETCLOSE); }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 259 "htmlcompact.lex"
+#line 260 "htmlcompact.lex"
 {count(); return (AREAOPEN); }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 260 "htmlcompact.lex"
+#line 261 "htmlcompact.lex"
 {count(); return (AREACLOSE); }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 261 "htmlcompact.lex"
+#line 262 "htmlcompact.lex"
 {count(); return (BASEOPEN);}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 262 "htmlcompact.lex"
+#line 263 "htmlcompact.lex"
 {count(); return (BASECLOSE); }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 263 "htmlcompact.lex"
+#line 264 "htmlcompact.lex"
 {count(); return (BASEFONTOPEN); }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 264 "htmlcompact.lex"
+#line 265 "htmlcompact.lex"
 {count(); return (BASEFONTCLOSE); }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 265 "htmlcompact.lex"
+#line 266 "htmlcompact.lex"
 {count(); return (BDOOPEN); }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 266 "htmlcompact.lex"
+#line 267 "htmlcompact.lex"
 {count(); return (BDOCLOSE); }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 267 "htmlcompact.lex"
+#line 268 "htmlcompact.lex"
 {count(); return (BIGOPEN); }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 268 "htmlcompact.lex"
+#line 269 "htmlcompact.lex"
 {count(); return (BIGCLOSE); }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 269 "htmlcompact.lex"
+#line 270 "htmlcompact.lex"
 {count(); return (BODYOPEN); }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 270 "htmlcompact.lex"
+#line 271 "htmlcompact.lex"
 {count(); return (BODYCLOSE); }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 271 "htmlcompact.lex"
+#line 272 "htmlcompact.lex"
 {count(); return (BLOCKQUOTEOPEN); }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 272 "htmlcompact.lex"
+#line 273 "htmlcompact.lex"
 {count(); return (BLOCKQUOTECLOSE); }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 273 "htmlcompact.lex"
+#line 274 "htmlcompact.lex"
 {count(); return (BUTTONOPEN); }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 274 "htmlcompact.lex"
+#line 275 "htmlcompact.lex"
 {count(); return (BUTTONCLOSE); }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 275 "htmlcompact.lex"
+#line 276 "htmlcompact.lex"
 {count(); return (CAPTIONOPEN); }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 276 "htmlcompact.lex"
+#line 277 "htmlcompact.lex"
 {count(); return (CAPTIONCLOSE); }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 277 "htmlcompact.lex"
+#line 278 "htmlcompact.lex"
 {count(); return (CODEOPEN); }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 278 "htmlcompact.lex"
+#line 279 "htmlcompact.lex"
 {count(); return (CODECLOSE); }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 279 "htmlcompact.lex"
+#line 280 "htmlcompact.lex"
 {count(); return (COLOPEN); }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 280 "htmlcompact.lex"
+#line 281 "htmlcompact.lex"
 {count(); return (COLCLOSE); }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 281 "htmlcompact.lex"
+#line 282 "htmlcompact.lex"
 {count(); return (COLGROUPOPEN); }
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 282 "htmlcompact.lex"
+#line 283 "htmlcompact.lex"
 {count(); return (COLGROUPCLOSE); }
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 283 "htmlcompact.lex"
+#line 284 "htmlcompact.lex"
 {count(); return (DDOPEN); }
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 284 "htmlcompact.lex"
+#line 285 "htmlcompact.lex"
 {count(); return (DDCLOSE); }
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 285 "htmlcompact.lex"
+#line 286 "htmlcompact.lex"
 {count(); return (DELOPEN); }
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 286 "htmlcompact.lex"
+#line 287 "htmlcompact.lex"
 {count(); return (DELCLOSE); }
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 287 "htmlcompact.lex"
+#line 288 "htmlcompact.lex"
 {count(); return (DFNOPEN); }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 288 "htmlcompact.lex"
+#line 289 "htmlcompact.lex"
 {count(); return (DFNCLOSE); }
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 289 "htmlcompact.lex"
+#line 290 "htmlcompact.lex"
 {count(); return (DIROPEN); }
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 290 "htmlcompact.lex"
+#line 291 "htmlcompact.lex"
 {count(); return (DIRCLOSE); }
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 291 "htmlcompact.lex"
+#line 292 "htmlcompact.lex"
 {count(); return (DIVOPEN); }
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 292 "htmlcompact.lex"
+#line 293 "htmlcompact.lex"
 {count(); return (DIVCLOSE); }
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 293 "htmlcompact.lex"
+#line 294 "htmlcompact.lex"
 {count(); return (DLOPEN); }
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 294 "htmlcompact.lex"
+#line 295 "htmlcompact.lex"
 {count(); return (DLCLOSE); }
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 295 "htmlcompact.lex"
+#line 296 "htmlcompact.lex"
 {count(); return (DTOPEN); }
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
-#line 296 "htmlcompact.lex"
+#line 297 "htmlcompact.lex"
 {count(); return (DTCLOSE); }
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
-#line 297 "htmlcompact.lex"
+#line 298 "htmlcompact.lex"
 {count(); return (EMOPEN); }
 	YY_BREAK
 case 51:
 YY_RULE_SETUP
-#line 298 "htmlcompact.lex"
+#line 299 "htmlcompact.lex"
 {count(); return (EMCLOSE); }
 	YY_BREAK
 case 52:
 YY_RULE_SETUP
-#line 299 "htmlcompact.lex"
+#line 300 "htmlcompact.lex"
 {count(); return (FIELDSETOPEN); }
 	YY_BREAK
 case 53:
 YY_RULE_SETUP
-#line 300 "htmlcompact.lex"
+#line 301 "htmlcompact.lex"
 {count(); return (FIELDSETCLOSE); }
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
-#line 301 "htmlcompact.lex"
+#line 302 "htmlcompact.lex"
 {count(); return (FRAMEOPEN); }
 	YY_BREAK
 case 55:
 YY_RULE_SETUP
-#line 302 "htmlcompact.lex"
+#line 303 "htmlcompact.lex"
 {count(); return (FRAMECLOSE); }
 	YY_BREAK
 case 56:
 YY_RULE_SETUP
-#line 303 "htmlcompact.lex"
+#line 304 "htmlcompact.lex"
 {count(); return (FRAMESETOPEN); }
 	YY_BREAK
 case 57:
 YY_RULE_SETUP
-#line 304 "htmlcompact.lex"
+#line 305 "htmlcompact.lex"
 {count(); return (FRAMESETCLOSE); }
 	YY_BREAK
 case 58:
 YY_RULE_SETUP
-#line 305 "htmlcompact.lex"
+#line 306 "htmlcompact.lex"
 {count(); return (NOFRAMESOPEN); }
 	YY_BREAK
 case 59:
 YY_RULE_SETUP
-#line 306 "htmlcompact.lex"
+#line 307 "htmlcompact.lex"
 {count(); return (NOFRAMESCLOSE); }
 	YY_BREAK
 case 60:
 YY_RULE_SETUP
-#line 307 "htmlcompact.lex"
+#line 308 "htmlcompact.lex"
 {count(); return (FORMOPEN); }
 	YY_BREAK
 case 61:
 YY_RULE_SETUP
-#line 308 "htmlcompact.lex"
+#line 309 "htmlcompact.lex"
 {count(); return (FORMCLOSE); }
 	YY_BREAK
 case 62:
 YY_RULE_SETUP
-#line 309 "htmlcompact.lex"
+#line 310 "htmlcompact.lex"
 {count(); return (HEADOPEN); }
 	YY_BREAK
 case 63:
 YY_RULE_SETUP
-#line 310 "htmlcompact.lex"
+#line 311 "htmlcompact.lex"
 {count(); return (HEADCLOSE); }
 	YY_BREAK
 case 64:
 YY_RULE_SETUP
-#line 311 "htmlcompact.lex"
+#line 312 "htmlcompact.lex"
 {count(); return (HNOPEN); }
 	YY_BREAK
 case 65:
 YY_RULE_SETUP
-#line 312 "htmlcompact.lex"
+#line 313 "htmlcompact.lex"
 {count(); return (HNCLOSE); }
 	YY_BREAK
 case 66:
 YY_RULE_SETUP
-#line 313 "htmlcompact.lex"
+#line 314 "htmlcompact.lex"
 {count(); return (HTMLOPEN); }
 	YY_BREAK
 case 67:
 YY_RULE_SETUP
-#line 314 "htmlcompact.lex"
+#line 315 "htmlcompact.lex"
 {count(); return (HTMLCLOSE); }
 	YY_BREAK
 case 68:
 YY_RULE_SETUP
-#line 315 "htmlcompact.lex"
+#line 316 "htmlcompact.lex"
 {count(); return (INPUTOPEN); }
 	YY_BREAK
 case 69:
 YY_RULE_SETUP
-#line 316 "htmlcompact.lex"
+#line 317 "htmlcompact.lex"
 {count(); return (INPUTCLOSE); }
 	YY_BREAK
 case 70:
 YY_RULE_SETUP
-#line 317 "htmlcompact.lex"
+#line 318 "htmlcompact.lex"
 {count(); return (IFRAMEOPEN); }
 	YY_BREAK
 case 71:
 YY_RULE_SETUP
-#line 318 "htmlcompact.lex"
+#line 319 "htmlcompact.lex"
 {count(); return (IFRAMECLOSE); }
 	YY_BREAK
 case 72:
 YY_RULE_SETUP
-#line 319 "htmlcompact.lex"
+#line 320 "htmlcompact.lex"
 {count(); return (INSOPEN); }
 	YY_BREAK
 case 73:
 YY_RULE_SETUP
-#line 320 "htmlcompact.lex"
+#line 321 "htmlcompact.lex"
 {count(); return (INSCLOSE); }
 	YY_BREAK
 case 74:
 YY_RULE_SETUP
-#line 321 "htmlcompact.lex"
+#line 322 "htmlcompact.lex"
 {count(); return (KBDOPEN); }
 	YY_BREAK
 case 75:
 YY_RULE_SETUP
-#line 322 "htmlcompact.lex"
+#line 323 "htmlcompact.lex"
 {count(); return (KBDCLOSE); }
 	YY_BREAK
 case 76:
 YY_RULE_SETUP
-#line 323 "htmlcompact.lex"
+#line 324 "htmlcompact.lex"
 {count(); return (LABELOPEN); }
 	YY_BREAK
 case 77:
 YY_RULE_SETUP
-#line 324 "htmlcompact.lex"
+#line 325 "htmlcompact.lex"
 {count(); return (LABELCLOSE); }
 	YY_BREAK
 case 78:
 YY_RULE_SETUP
-#line 325 "htmlcompact.lex"
+#line 326 "htmlcompact.lex"
 {count(); return (LEGENDOPEN); }
 	YY_BREAK
 case 79:
 YY_RULE_SETUP
-#line 326 "htmlcompact.lex"
+#line 327 "htmlcompact.lex"
 {count(); return (LEGENDCLOSE); }
 	YY_BREAK
 case 80:
 YY_RULE_SETUP
-#line 327 "htmlcompact.lex"
+#line 328 "htmlcompact.lex"
 {count(); return (LISTINGOPEN); }
 	YY_BREAK
 case 81:
 YY_RULE_SETUP
-#line 328 "htmlcompact.lex"
+#line 329 "htmlcompact.lex"
 {count(); return (LISTINGCLOSE); }
 	YY_BREAK
 case 82:
 YY_RULE_SETUP
-#line 329 "htmlcompact.lex"
+#line 330 "htmlcompact.lex"
 {count(); return (MAPOPEN); }
 	YY_BREAK
 case 83:
 YY_RULE_SETUP
-#line 330 "htmlcompact.lex"
+#line 331 "htmlcompact.lex"
 {count(); return (MAPCLOSE); }
 	YY_BREAK
 case 84:
 YY_RULE_SETUP
-#line 331 "htmlcompact.lex"
+#line 332 "htmlcompact.lex"
 {count(); return (MENUOPEN); }
 	YY_BREAK
 case 85:
 YY_RULE_SETUP
-#line 332 "htmlcompact.lex"
+#line 333 "htmlcompact.lex"
 {count(); return (MENUCLOSE); }
 	YY_BREAK
 case 86:
 YY_RULE_SETUP
-#line 333 "htmlcompact.lex"
+#line 334 "htmlcompact.lex"
 {count(); return (METAOPEN); }
 	YY_BREAK
 case 87:
 YY_RULE_SETUP
-#line 334 "htmlcompact.lex"
+#line 335 "htmlcompact.lex"
 {count(); return (METACLOSE); }
 	YY_BREAK
 case 88:
 YY_RULE_SETUP
-#line 335 "htmlcompact.lex"
+#line 336 "htmlcompact.lex"
 {count(); return (NEXTIDOPEN);}
 	YY_BREAK
 case 89:
 YY_RULE_SETUP
-#line 336 "htmlcompact.lex"
+#line 337 "htmlcompact.lex"
 {count(); return (NEXTIDCLOSE); }
 	YY_BREAK
 case 90:
 YY_RULE_SETUP
-#line 337 "htmlcompact.lex"
+#line 338 "htmlcompact.lex"
 {count(); return (NOSCRIPTOPEN); }
 	YY_BREAK
 case 91:
 YY_RULE_SETUP
-#line 338 "htmlcompact.lex"
+#line 339 "htmlcompact.lex"
 {count(); return (NOSCRIPTCLOSE); }
 	YY_BREAK
 case 92:
 YY_RULE_SETUP
-#line 339 "htmlcompact.lex"
+#line 340 "htmlcompact.lex"
 {count(); return (SELECTOPEN); }
 	YY_BREAK
 case 93:
 YY_RULE_SETUP
-#line 340 "htmlcompact.lex"
+#line 341 "htmlcompact.lex"
 {count(); return (SELECTCLOSE); }
 	YY_BREAK
 case 94:
 YY_RULE_SETUP
-#line 341 "htmlcompact.lex"
+#line 342 "htmlcompact.lex"
 {count(); return (OPTIONOPEN); }
 	YY_BREAK
 case 95:
 YY_RULE_SETUP
-#line 342 "htmlcompact.lex"
+#line 343 "htmlcompact.lex"
 {count(); return (OPTIONCLOSE); }
 	YY_BREAK
 case 96:
 YY_RULE_SETUP
-#line 343 "htmlcompact.lex"
+#line 344 "htmlcompact.lex"
 {count(); return (OBJECTOPEN); }
 	YY_BREAK
 case 97:
 YY_RULE_SETUP
-#line 344 "htmlcompact.lex"
+#line 345 "htmlcompact.lex"
 {count(); return (OBJECTCLOSE); }
 	YY_BREAK
 case 98:
 YY_RULE_SETUP
-#line 345 "htmlcompact.lex"
+#line 346 "htmlcompact.lex"
 {count(); return (OPTGROUPOPEN); }
 	YY_BREAK
 case 99:
 YY_RULE_SETUP
-#line 346 "htmlcompact.lex"
+#line 347 "htmlcompact.lex"
 {count(); return (OPTGROUPCLOSE); }
 	YY_BREAK
 case 100:
 YY_RULE_SETUP
-#line 347 "htmlcompact.lex"
+#line 348 "htmlcompact.lex"
 {count(); return (PARAMOPEN); }
 	YY_BREAK
 case 101:
 YY_RULE_SETUP
-#line 348 "htmlcompact.lex"
+#line 349 "htmlcompact.lex"
 {count(); return (PARAMCLOSE); }
 	YY_BREAK
 case 102:
 YY_RULE_SETUP
-#line 349 "htmlcompact.lex"
+#line 350 "htmlcompact.lex"
 {count(); return (PLAINTEXTOPEN); }
 	YY_BREAK
 case 103:
 YY_RULE_SETUP
-#line 350 "htmlcompact.lex"
+#line 351 "htmlcompact.lex"
 {count(); return (PLAINTEXTCLOSE); }
 	YY_BREAK
 case 104:
 YY_RULE_SETUP
-#line 351 "htmlcompact.lex"
+#line 352 "htmlcompact.lex"
 {count(); return (PREOPEN); }
 	YY_BREAK
 case 105:
 YY_RULE_SETUP
-#line 352 "htmlcompact.lex"
+#line 353 "htmlcompact.lex"
 {count(); return (PRECLOSE); }
 	YY_BREAK
 case 106:
 YY_RULE_SETUP
-#line 353 "htmlcompact.lex"
+#line 354 "htmlcompact.lex"
 {count(); return (QOPEN);}
 	YY_BREAK
 case 107:
 YY_RULE_SETUP
-#line 354 "htmlcompact.lex"
+#line 355 "htmlcompact.lex"
 {count(); return (QCLOSE); }
 	YY_BREAK
 case 108:
 YY_RULE_SETUP
-#line 355 "htmlcompact.lex"
+#line 356 "htmlcompact.lex"
 {count(); return (SOPEN); }
 	YY_BREAK
 case 109:
 YY_RULE_SETUP
-#line 356 "htmlcompact.lex"
+#line 357 "htmlcompact.lex"
 {count(); return (SCLOSE); }
 	YY_BREAK
 case 110:
 YY_RULE_SETUP
-#line 357 "htmlcompact.lex"
+#line 358 "htmlcompact.lex"
 {count(); return (SAMPOPEN); }
 	YY_BREAK
 case 111:
 YY_RULE_SETUP
-#line 358 "htmlcompact.lex"
+#line 359 "htmlcompact.lex"
 {count(); return (SAMPCLOSE); }
 	YY_BREAK
 case 112:
 YY_RULE_SETUP
-#line 359 "htmlcompact.lex"
+#line 360 "htmlcompact.lex"
 {count(); return (SCRIPTOPEN); }
 	YY_BREAK
 case 113:
 YY_RULE_SETUP
-#line 360 "htmlcompact.lex"
+#line 361 "htmlcompact.lex"
 {count(); return (SCRIPTCLOSE); }
 	YY_BREAK
 case 114:
 YY_RULE_SETUP
-#line 361 "htmlcompact.lex"
+#line 362 "htmlcompact.lex"
 {count(); return (SPANOPEN); }
 	YY_BREAK
 case 115:
 YY_RULE_SETUP
-#line 362 "htmlcompact.lex"
+#line 363 "htmlcompact.lex"
 {count(); return (SPANCLOSE); }
 	YY_BREAK
 case 116:
 YY_RULE_SETUP
-#line 363 "htmlcompact.lex"
+#line 364 "htmlcompact.lex"
 {count(); return (STRIKEOPEN); }
 	YY_BREAK
 case 117:
 YY_RULE_SETUP
-#line 364 "htmlcompact.lex"
+#line 365 "htmlcompact.lex"
 {count(); return (STRIKECLOSE); }
 	YY_BREAK
 case 118:
 YY_RULE_SETUP
-#line 365 "htmlcompact.lex"
+#line 366 "htmlcompact.lex"
 {count(); return (STRONGOPEN); }
 	YY_BREAK
 case 119:
 YY_RULE_SETUP
-#line 366 "htmlcompact.lex"
+#line 367 "htmlcompact.lex"
 {count(); return (STRONGCLOSE); }
 	YY_BREAK
 case 120:
 YY_RULE_SETUP
-#line 367 "htmlcompact.lex"
+#line 368 "htmlcompact.lex"
 {count(); return (STYLEOPEN); }
 	YY_BREAK
 case 121:
 YY_RULE_SETUP
-#line 368 "htmlcompact.lex"
+#line 369 "htmlcompact.lex"
 {count(); return (STYLECLOSE); }
 	YY_BREAK
 case 122:
 YY_RULE_SETUP
-#line 369 "htmlcompact.lex"
+#line 370 "htmlcompact.lex"
 {count(); return (TABLEOPEN); }
 	YY_BREAK
 case 123:
 YY_RULE_SETUP
-#line 370 "htmlcompact.lex"
+#line 371 "htmlcompact.lex"
 {count(); return (TABLECLOSE); }
 	YY_BREAK
 case 124:
 YY_RULE_SETUP
-#line 371 "htmlcompact.lex"
+#line 372 "htmlcompact.lex"
 {count(); return (TROPEN); }
 	YY_BREAK
 case 125:
 YY_RULE_SETUP
-#line 372 "htmlcompact.lex"
+#line 373 "htmlcompact.lex"
 {count(); return (TRCLOSE); }
 	YY_BREAK
 case 126:
 YY_RULE_SETUP
-#line 373 "htmlcompact.lex"
+#line 374 "htmlcompact.lex"
 {count(); return (TDOPEN); }
 	YY_BREAK
 case 127:
 YY_RULE_SETUP
-#line 374 "htmlcompact.lex"
+#line 375 "htmlcompact.lex"
 {count(); return (TDCLOSE); }
 	YY_BREAK
 case 128:
 YY_RULE_SETUP
-#line 375 "htmlcompact.lex"
+#line 376 "htmlcompact.lex"
 {count(); return (THOPEN); }
 	YY_BREAK
 case 129:
 YY_RULE_SETUP
-#line 376 "htmlcompact.lex"
+#line 377 "htmlcompact.lex"
 {count(); return (THCLOSE); }
 	YY_BREAK
 case 130:
 YY_RULE_SETUP
-#line 377 "htmlcompact.lex"
+#line 378 "htmlcompact.lex"
 {count(); return (THEADOPEN); }
 	YY_BREAK
 case 131:
 YY_RULE_SETUP
-#line 378 "htmlcompact.lex"
+#line 379 "htmlcompact.lex"
 {count(); return (THEADCLOSE); }
 	YY_BREAK
 case 132:
 YY_RULE_SETUP
-#line 379 "htmlcompact.lex"
+#line 380 "htmlcompact.lex"
 {count(); return (TBODYOPEN); }
 	YY_BREAK
 case 133:
 YY_RULE_SETUP
-#line 380 "htmlcompact.lex"
+#line 381 "htmlcompact.lex"
 {count(); return (TBODYCLOSE); }
 	YY_BREAK
 case 134:
 YY_RULE_SETUP
-#line 381 "htmlcompact.lex"
+#line 382 "htmlcompact.lex"
 {count(); return (TEXTAREAOPEN); }
 	YY_BREAK
 case 135:
 YY_RULE_SETUP
-#line 382 "htmlcompact.lex"
+#line 383 "htmlcompact.lex"
 {count(); return (TEXTAREACLOSE); }
 	YY_BREAK
 case 136:
 YY_RULE_SETUP
-#line 383 "htmlcompact.lex"
+#line 384 "htmlcompact.lex"
 {count(); return (TFOOTOPEN); }
 	YY_BREAK
 case 137:
 YY_RULE_SETUP
-#line 384 "htmlcompact.lex"
+#line 385 "htmlcompact.lex"
 {count(); return (TFOOTCLOSE); }
 	YY_BREAK
 case 138:
 YY_RULE_SETUP
-#line 385 "htmlcompact.lex"
+#line 386 "htmlcompact.lex"
 {count(); return (TITLEOPEN); }
 	YY_BREAK
 case 139:
 YY_RULE_SETUP
-#line 386 "htmlcompact.lex"
+#line 387 "htmlcompact.lex"
 {count(); return (TITLECLOSE); }
 	YY_BREAK
 case 140:
 YY_RULE_SETUP
-#line 387 "htmlcompact.lex"
+#line 388 "htmlcompact.lex"
 {count(); return (TTOPEN); }
 	YY_BREAK
 case 141:
 YY_RULE_SETUP
-#line 388 "htmlcompact.lex"
+#line 389 "htmlcompact.lex"
 {count(); return (TTCLOSE); }
 	YY_BREAK
 case 142:
 YY_RULE_SETUP
-#line 389 "htmlcompact.lex"
+#line 390 "htmlcompact.lex"
 {count(); return (IMGOPEN); }
 	YY_BREAK
 case 143:
 YY_RULE_SETUP
-#line 390 "htmlcompact.lex"
+#line 391 "htmlcompact.lex"
 {count(); return (IMGCLOSE); }
 	YY_BREAK
 case 144:
 YY_RULE_SETUP
-#line 391 "htmlcompact.lex"
+#line 392 "htmlcompact.lex"
 {count(); return (AOPEN); }
 	YY_BREAK
 case 145:
 YY_RULE_SETUP
-#line 392 "htmlcompact.lex"
+#line 393 "htmlcompact.lex"
 {count(); return(ACLOSE); }
 	YY_BREAK
 case 146:
 YY_RULE_SETUP
-#line 393 "htmlcompact.lex"
+#line 394 "htmlcompact.lex"
 {count(); return(LINKOPEN); }
 	YY_BREAK
 case 147:
 YY_RULE_SETUP
-#line 394 "htmlcompact.lex"
+#line 395 "htmlcompact.lex"
 {count(); return(LINKCLOSE); }
 	YY_BREAK
 case 148:
 YY_RULE_SETUP
-#line 395 "htmlcompact.lex"
+#line 396 "htmlcompact.lex"
 {count(); return(ULOPEN); }
 	YY_BREAK
 case 149:
 YY_RULE_SETUP
-#line 396 "htmlcompact.lex"
+#line 397 "htmlcompact.lex"
 {count(); return(ULCLOSE); }
 	YY_BREAK
 case 150:
 YY_RULE_SETUP
-#line 397 "htmlcompact.lex"
+#line 398 "htmlcompact.lex"
 {count(); return(LIOPEN); }
 	YY_BREAK
 case 151:
 YY_RULE_SETUP
-#line 398 "htmlcompact.lex"
+#line 399 "htmlcompact.lex"
 {count(); return(LICLOSE);}
 	YY_BREAK
 case 152:
 YY_RULE_SETUP
-#line 399 "htmlcompact.lex"
+#line 400 "htmlcompact.lex"
 {count(); return(OLOPEN); }
 	YY_BREAK
 case 153:
 YY_RULE_SETUP
-#line 400 "htmlcompact.lex"
+#line 401 "htmlcompact.lex"
 {count(); return(OLCLOSE); }
 	YY_BREAK
 case 154:
 YY_RULE_SETUP
-#line 401 "htmlcompact.lex"
+#line 402 "htmlcompact.lex"
 {count(); return(BOPEN); }
 	YY_BREAK
 case 155:
 YY_RULE_SETUP
-#line 402 "htmlcompact.lex"
+#line 403 "htmlcompact.lex"
 {count(); return(BCLOSE); }
 	YY_BREAK
 case 156:
 YY_RULE_SETUP
-#line 403 "htmlcompact.lex"
+#line 404 "htmlcompact.lex"
 {count(); return(IOPEN); }
 	YY_BREAK
 case 157:
 YY_RULE_SETUP
-#line 404 "htmlcompact.lex"
+#line 405 "htmlcompact.lex"
 {count(); return(ICLOSE); }
 	YY_BREAK
 case 158:
 YY_RULE_SETUP
-#line 405 "htmlcompact.lex"
+#line 406 "htmlcompact.lex"
 {count(); return(UOPEN); }
 	YY_BREAK
 case 159:
 YY_RULE_SETUP
-#line 406 "htmlcompact.lex"
+#line 407 "htmlcompact.lex"
 {count(); return(UCLOSE);}
 	YY_BREAK
 case 160:
 YY_RULE_SETUP
-#line 407 "htmlcompact.lex"
+#line 408 "htmlcompact.lex"
 {count(); return(SMALLOPEN); }
 	YY_BREAK
 case 161:
 YY_RULE_SETUP
-#line 408 "htmlcompact.lex"
+#line 409 "htmlcompact.lex"
 {count(); return(SMALLCLOSE); }
 	YY_BREAK
 case 162:
 YY_RULE_SETUP
-#line 409 "htmlcompact.lex"
+#line 410 "htmlcompact.lex"
 {count(); return(SUPOPEN); }
 	YY_BREAK
 case 163:
 YY_RULE_SETUP
-#line 410 "htmlcompact.lex"
+#line 411 "htmlcompact.lex"
 {count(); return(SUPCLOSE); }
 	YY_BREAK
 case 164:
 YY_RULE_SETUP
-#line 411 "htmlcompact.lex"
+#line 412 "htmlcompact.lex"
 {count(); return(SUBOPEN);}
 	YY_BREAK
 case 165:
 YY_RULE_SETUP
-#line 412 "htmlcompact.lex"
+#line 413 "htmlcompact.lex"
 {count(); return(SUBCLOSE); }
 	YY_BREAK
 case 166:
 YY_RULE_SETUP
-#line 413 "htmlcompact.lex"
+#line 414 "htmlcompact.lex"
 {count(); return(CENTEROPEN); }
 	YY_BREAK
 case 167:
 YY_RULE_SETUP
-#line 414 "htmlcompact.lex"
+#line 415 "htmlcompact.lex"
 {count(); return(CENTERCLOSE); }     
 	YY_BREAK
 case 168:
 YY_RULE_SETUP
-#line 415 "htmlcompact.lex"
+#line 416 "htmlcompact.lex"
 {count(); return(FONTOPEN); }
 	YY_BREAK
 case 169:
 YY_RULE_SETUP
-#line 416 "htmlcompact.lex"
+#line 417 "htmlcompact.lex"
 {count(); return(FONTCLOSE); }
 	YY_BREAK
 case 170:
 YY_RULE_SETUP
-#line 417 "htmlcompact.lex"
+#line 418 "htmlcompact.lex"
 {count(); return(HROPEN); }
 	YY_BREAK
 case 171:
 YY_RULE_SETUP
-#line 418 "htmlcompact.lex"
+#line 419 "htmlcompact.lex"
 {count(); return(HRCLOSE); }
 	YY_BREAK
 case 172:
 YY_RULE_SETUP
-#line 419 "htmlcompact.lex"
+#line 420 "htmlcompact.lex"
 {count(); return(POPEN); }
 	YY_BREAK
 case 173:
 YY_RULE_SETUP
-#line 420 "htmlcompact.lex"
+#line 421 "htmlcompact.lex"
 {count(); return(PCLOSE); }
 	YY_BREAK
 case 174:
 YY_RULE_SETUP
-#line 421 "htmlcompact.lex"
+#line 422 "htmlcompact.lex"
 {count(); return(BROPEN); }
 	YY_BREAK
 case 175:
 YY_RULE_SETUP
-#line 422 "htmlcompact.lex"
+#line 423 "htmlcompact.lex"
 {count(); return(BRCLOSE); }
 	YY_BREAK
 case 176:
 /* rule 176 can match eol */
 YY_RULE_SETUP
-#line 423 "htmlcompact.lex"
+#line 424 "htmlcompact.lex"
 {count(); return (NAME); } 
 	YY_BREAK
 case 177:
 /* rule 177 can match eol */
 YY_RULE_SETUP
-#line 424 "htmlcompact.lex"
+#line 425 "htmlcompact.lex"
 {count(); return (HREF); } 
 	YY_BREAK
 case 178:
 /* rule 178 can match eol */
 YY_RULE_SETUP
-#line 425 "htmlcompact.lex"
+#line 426 "htmlcompact.lex"
 {count(); return (REL); } 
 	YY_BREAK
 case 179:
 /* rule 179 can match eol */
 YY_RULE_SETUP
-#line 426 "htmlcompact.lex"
+#line 427 "htmlcompact.lex"
 {count(); return (REV); } 
 	YY_BREAK
 case 180:
 /* rule 180 can match eol */
 YY_RULE_SETUP
-#line 427 "htmlcompact.lex"
+#line 428 "htmlcompact.lex"
 {count(); return (TITLE); }
 	YY_BREAK
 case 181:
 /* rule 181 can match eol */
 YY_RULE_SETUP
-#line 428 "htmlcompact.lex"
+#line 429 "htmlcompact.lex"
 {count(); return (URN); } 
 	YY_BREAK
 case 182:
 /* rule 182 can match eol */
 YY_RULE_SETUP
-#line 429 "htmlcompact.lex"
+#line 430 "htmlcompact.lex"
 {count(); return (METHODS); } 
 	YY_BREAK
 case 183:
 /* rule 183 can match eol */
 YY_RULE_SETUP
-#line 430 "htmlcompact.lex"
+#line 431 "htmlcompact.lex"
 {count(); return (SHAPE); }
 	YY_BREAK
 case 184:
 /* rule 184 can match eol */
 YY_RULE_SETUP
-#line 431 "htmlcompact.lex"
+#line 432 "htmlcompact.lex"
 {count(); return (COORDS); }
 	YY_BREAK
 case 185:
 /* rule 185 can match eol */
 YY_RULE_SETUP
-#line 432 "htmlcompact.lex"
+#line 433 "htmlcompact.lex"
 {count(); return (ALT); }
 	YY_BREAK
 case 186:
 YY_RULE_SETUP
-#line 433 "htmlcompact.lex"
+#line 434 "htmlcompact.lex"
 {count(); return (NOHREF); }
 	YY_BREAK
 case 187:
 /* rule 187 can match eol */
 YY_RULE_SETUP
-#line 434 "htmlcompact.lex"
+#line 435 "htmlcompact.lex"
 {count(); return (BGCOLOR); }
 	YY_BREAK
 case 188:
 /* rule 188 can match eol */
 YY_RULE_SETUP
-#line 435 "htmlcompact.lex"
+#line 436 "htmlcompact.lex"
 {count(); return (BACKGROUND); }
 	YY_BREAK
 case 189:
 /* rule 189 can match eol */
 YY_RULE_SETUP
-#line 436 "htmlcompact.lex"
+#line 437 "htmlcompact.lex"
 {count(); return (TEXT); }
 	YY_BREAK
 case 190:
 /* rule 190 can match eol */
 YY_RULE_SETUP
-#line 437 "htmlcompact.lex"
+#line 438 "htmlcompact.lex"
 {count(); return (LINK); } 
 	YY_BREAK
 case 191:
 /* rule 191 can match eol */
 YY_RULE_SETUP
-#line 438 "htmlcompact.lex"
+#line 439 "htmlcompact.lex"
 {count(); return (VLINK); }
 	YY_BREAK
 case 192:
 /* rule 192 can match eol */
 YY_RULE_SETUP
-#line 439 "htmlcompact.lex"
+#line 440 "htmlcompact.lex"
 {count(); return (ALINK); }
 	YY_BREAK
 case 193:
 YY_RULE_SETUP
-#line 440 "htmlcompact.lex"
+#line 441 "htmlcompact.lex"
 {count(); return (CLEAR); } 
 	YY_BREAK
 case 194:
 YY_RULE_SETUP
-#line 441 "htmlcompact.lex"
+#line 442 "htmlcompact.lex"
 {count(); return (COMPACT); }
 	YY_BREAK
 case 195:
 YY_RULE_SETUP
-#line 442 "htmlcompact.lex"
+#line 443 "htmlcompact.lex"
 {count(); return (ALIGN); } 
 	YY_BREAK
 case 196:
 /* rule 196 can match eol */
 YY_RULE_SETUP
-#line 443 "htmlcompact.lex"
+#line 444 "htmlcompact.lex"
 {count(); return (SIZE); }  
 	YY_BREAK
 case 197:
 /* rule 197 can match eol */
 YY_RULE_SETUP
-#line 444 "htmlcompact.lex"
+#line 445 "htmlcompact.lex"
 {count(); return (COLOR); }
 	YY_BREAK
 case 198:
 /* rule 198 can match eol */
 YY_RULE_SETUP
-#line 445 "htmlcompact.lex"
+#line 446 "htmlcompact.lex"
 {count(); return (ACTION); }
 	YY_BREAK
 case 199:
 /* rule 199 can match eol */
 YY_RULE_SETUP
-#line 446 "htmlcompact.lex"
+#line 447 "htmlcompact.lex"
 {count(); return (ENCTYPE); } 
 	YY_BREAK
 case 200:
 /* rule 200 can match eol */
 YY_RULE_SETUP
-#line 447 "htmlcompact.lex"
+#line 448 "htmlcompact.lex"
 {count(); return (WIDTH); } 
 	YY_BREAK
 case 201:
 YY_RULE_SETUP
-#line 448 "htmlcompact.lex"
+#line 449 "htmlcompact.lex"
 {count(); return (NOSHADE); } 
 	YY_BREAK
 case 202:
 /* rule 202 can match eol */
 YY_RULE_SETUP
-#line 449 "htmlcompact.lex"
+#line 450 "htmlcompact.lex"
 {count(); return (VERSION); }
 	YY_BREAK
 case 203:
 /* rule 203 can match eol */
 YY_RULE_SETUP
-#line 450 "htmlcompact.lex"
+#line 451 "htmlcompact.lex"
 {count(); return (SRC); } 
 	YY_BREAK
 case 204:
 /* rule 204 can match eol */
 YY_RULE_SETUP
-#line 451 "htmlcompact.lex"
+#line 452 "htmlcompact.lex"
 {count(); return (HEIGHT); }
 	YY_BREAK
 case 205:
 /* rule 205 can match eol */
 YY_RULE_SETUP
-#line 452 "htmlcompact.lex"
+#line 453 "htmlcompact.lex"
 {count(); return (VSPACE); }
 	YY_BREAK
 case 206:
 /* rule 206 can match eol */
 YY_RULE_SETUP
-#line 453 "htmlcompact.lex"
+#line 454 "htmlcompact.lex"
 {count(); return (BORDER); }
 	YY_BREAK
 case 207:
 /* rule 207 can match eol */
 YY_RULE_SETUP
-#line 454 "htmlcompact.lex"
+#line 455 "htmlcompact.lex"
 {count(); return (USEMAP); }
 	YY_BREAK
 case 208:
 /* rule 208 can match eol */
 YY_RULE_SETUP
-#line 455 "htmlcompact.lex"
+#line 456 "htmlcompact.lex"
 {count(); return (ISMAP); }
 	YY_BREAK
 case 209:
 /* rule 209 can match eol */
 YY_RULE_SETUP
-#line 456 "htmlcompact.lex"
+#line 457 "htmlcompact.lex"
 {count(); return (TYPE); }
 	YY_BREAK
 case 210:
 /* rule 210 can match eol */
 YY_RULE_SETUP
-#line 457 "htmlcompact.lex"
+#line 458 "htmlcompact.lex"
 {count(); return (MAXLENGTH); }
 	YY_BREAK
 case 211:
 /* rule 211 can match eol */
 YY_RULE_SETUP
-#line 458 "htmlcompact.lex"
+#line 459 "htmlcompact.lex"
 {count(); return (VALUE); }
 	YY_BREAK
 case 212:
 YY_RULE_SETUP
-#line 459 "htmlcompact.lex"
+#line 460 "htmlcompact.lex"
 {count(); return (CHECKED); }
 	YY_BREAK
 case 213:
 /* rule 213 can match eol */
 YY_RULE_SETUP
-#line 460 "htmlcompact.lex"
+#line 461 "htmlcompact.lex"
 {count(); return (PROMPT); }
 	YY_BREAK
 case 214:
 /* rule 214 can match eol */
 YY_RULE_SETUP
-#line 461 "htmlcompact.lex"
+#line 462 "htmlcompact.lex"
 {count(); return (ID); }
 	YY_BREAK
 case 215:
 /* rule 215 can match eol */
 YY_RULE_SETUP
-#line 462 "htmlcompact.lex"
+#line 463 "htmlcompact.lex"
 {count(); return (HTTP_EQUIV); }
 	YY_BREAK
 case 216:
 YY_RULE_SETUP
-#line 463 "htmlcompact.lex"
+#line 464 "htmlcompact.lex"
 {count(); return (CONTENT); }
 	YY_BREAK
 case 217:
 /* rule 217 can match eol */
 YY_RULE_SETUP
-#line 464 "htmlcompact.lex"
+#line 465 "htmlcompact.lex"
 {count(); return (N); }
 	YY_BREAK
 case 218:
 /* rule 218 can match eol */
 YY_RULE_SETUP
-#line 465 "htmlcompact.lex"
+#line 466 "htmlcompact.lex"
 {count(); return (START); }
 	YY_BREAK
 case 219:
 YY_RULE_SETUP
-#line 466 "htmlcompact.lex"
+#line 467 "htmlcompact.lex"
 {count(); return (SELECTED); }
 	YY_BREAK
 case 220:
 YY_RULE_SETUP
-#line 467 "htmlcompact.lex"
+#line 468 "htmlcompact.lex"
 {count(); return (MULTIPLE); }
 	YY_BREAK
 case 221:
 /* rule 221 can match eol */
 YY_RULE_SETUP
-#line 468 "htmlcompact.lex"
+#line 469 "htmlcompact.lex"
 {count(); return (CELLSPACING); }
 	YY_BREAK
 case 222:
 /* rule 222 can match eol */
 YY_RULE_SETUP
-#line 469 "htmlcompact.lex"
+#line 470 "htmlcompact.lex"
 {count(); return (CELLPADDING); }
 	YY_BREAK
 case 223:
 /* rule 223 can match eol */
 YY_RULE_SETUP
-#line 470 "htmlcompact.lex"
+#line 471 "htmlcompact.lex"
 {count(); return (ROWSPAN); }
 	YY_BREAK
 case 224:
 /* rule 224 can match eol */
 YY_RULE_SETUP
-#line 471 "htmlcompact.lex"
+#line 472 "htmlcompact.lex"
 {count(); return (COLSPAN); }
 	YY_BREAK
 case 225:
 YY_RULE_SETUP
-#line 472 "htmlcompact.lex"
+#line 473 "htmlcompact.lex"
 {count(); return (NOWRAP); }
 	YY_BREAK
 case 226:
 /* rule 226 can match eol */
 YY_RULE_SETUP
-#line 476 "htmlcompact.lex"
+#line 477 "htmlcompact.lex"
 { count(); }
 	YY_BREAK
 case 227:
 YY_RULE_SETUP
-#line 477 "htmlcompact.lex"
+#line 478 "htmlcompact.lex"
 { /* ignore bad characters */ }
 	YY_BREAK
 case 228:
 YY_RULE_SETUP
-#line 479 "htmlcompact.lex"
+#line 480 "htmlcompact.lex"
 ECHO;
 	YY_BREAK
-#line 2654 "lex.yy.c"
+#line 2655 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -3656,7 +3657,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 479 "htmlcompact.lex"
+#line 480 "htmlcompact.lex"
 
 
 yywrap()
